@@ -1,0 +1,14 @@
+{
+  "accent": "purple",
+  "seed": 23,
+  "scenes": [
+    {"type": "title", "dur": 2.5, "kicker": "QUIZ", "lines": [{"t": "DEVINE", "color": "white"}, {"t": "LE JOUEUR", "color": "gold"}],
+     "sub": ["en 3 indices", "Mets pause si tu as trouvé"]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 0, "clues": [["Né à Angers", "en 2005"], ["Débuts pros à 17 ans", "avec le Stade Rennais"], ["Doublé en finale", "de la Ligue des champions 2025"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 1, "clues": [["Né à Angers", "en 2005"], ["Débuts pros à 17 ans", "avec le Stade Rennais"], ["Doublé en finale", "de la Ligue des champions 2025"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 2, "clues": [["Né à Angers", "en 2005"], ["Débuts pros à 17 ans", "avec le Stade Rennais"], ["Doublé en finale", "de la Ligue des champions 2025"]]},
+    {"type": "reveal", "dur": 3.0, "pre": "C'EST…", "lines": ["DÉSIRÉ", "DOUÉ"], "sub": "Paris Saint-Germain · 21 ans", "pill": "Champion d'Europe 2025"},
+    {"type": "poll", "dur": 2.5, "lines": [{"t": "TROUVÉ AU", "color": "white"}, {"t": "QUEL INDICE ?", "color": "gold"}], "size": 120,
+     "options": [{"label": "1", "color": "white"}, {"label": "2", "color": "white"}, {"label": "3", "color": "white"}], "filled": false}
+  ]
+}

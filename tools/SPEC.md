@@ -1,0 +1,42 @@
+# Format des specs vidéo (`specs/*.json`)
+
+Une spec décrit une vidéo verticale 1080×1920 de 15 à 25 s, découpée en scènes.
+Rendu : `python3 tools/make_video.py specs/x.json videos/x.mp4`
+Contrôle visuel : `python3 tools/make_video.py specs/x.json --stills /tmp/stills_x` (dernière image de chaque scène).
+
+Le son (beat original généré en code, libre de droits) est ajouté automatiquement et calé sur les
+changements de scène ; les comptes à rebours des quiz ajoutent des « tic ».
+
+## Racine
+
+| clé | rôle |
+|---|---|
+| `accent` | couleur du halo de fond (`"red"`, `"blue"`, `"purple"`…) ou `{"split": ["blue", "pink"]}` pour un duel (gauche/droite) |
+| `left_name`, `right_name` | noms pour les scènes `duel` (si `split`) |
+| `seed` | entier : varie le beat d'une vidéo à l'autre |
+| `scenes` | liste des scènes (ci-dessous) |
+
+Couleurs : `white gold grey light red green blue pink purple orange cyan dark`, ou `"#RRGGBB"`.
+Durées (`dur`, en secondes) arrondies à 0,5 s (minimum 1,5 s). Une ligne = `"texte"` ou `{"t": "texte", "color": "gold"}`.
+Toute scène accepte `"source": "Stats Foot Mercato, au 07/11/2026"` (petite mention en bas).
+
+## Types de scènes
+
+- `title` — accroche : `kicker` (pastille dorée, ex. "QUIZ"), `lines` (gros texte, 1 à 3 lignes), `sub` (1re ligne blanche, suivantes plus petites), `pill` (pastille couleur d'accent), `size` (défaut 220).
+- `counters` — compteurs animés : `top`, `items` = `[{"value": 234, "from": 0, "label": "SÉLECTIONS", "size": 260, "color": "gold", "suffix": ""}]` (1 ou 2 items), `chips` = `[{"label": "Mbappé", "sub": "27 ans", "color": "blue"}]`, `badge`.
+- `cards` — liste de cartes : `title`, `subtitle`, `items` = `["EURO 2016", ["Texte", "sous-texte"]]`, `numbered` (true pour un top 3 / top 5).
+- `progress` — jauge vers un objectif : `top`, `value`, `from`, `label`, `target`, `big` (texte doré), `sub`, `left_label`, `right_label`.
+- `duel` — comparaison barre à barre : `rows` = `[{"label": "BUTS", "l": 16, "r": 13}]` (2 ou 3 lignes), `left`/`right` (sinon `left_name`/`right_name`).
+- `statement` — phrase choc sur 1 à 3 lignes colorées : `lines`, `box` = `["ligne 1", "ligne 2 dorée"]`, `size` (défaut 92).
+- `poll` — appel au commentaire : `lines`, `options` = `[{"label": "OUI", "color": "green"}]` (2 ou 3), `filled` (false = boutons discrets), `cta`, `size` (défaut 130).
+- `quiz_clue` — indice de quiz avec compte à rebours 3 s : `clues` (les 3 indices, toujours la même liste), `index` (0, 1 puis 2), `title`, `kicker`. Prévoir `dur: 4.0`.
+- `reveal` — réponse : `pre` ("C'EST…"), `lines` (nom en doré), `sub`, `pill`.
+- `custom` — `elements` libres, empilés et centrés : `{"kind": "big"|"text"|"pill"|"counter"|"card"|"bar"|"options"|"chips"|"box"|"spacer", ...}` (mêmes champs que ci-dessus).
+
+## Règles de mise en page
+
+- Le contenu utile tient entre y≈400 et y≈1450 : le bas de l'écran est couvert par la légende TikTok, la droite par les boutons. Le script avertit si une scène dépasse.
+- Textes courts : 2 à 4 mots par grosse ligne, 6 à 8 mots max pour un sous-texte.
+- Jamais de photo de joueur, de logo de club ou d'image de match.
+
+Exemples complets : `specs/exemples/`.

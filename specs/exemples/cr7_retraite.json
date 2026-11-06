@@ -1,0 +1,17 @@
+{
+  "accent": "red",
+  "seed": 7,
+  "scenes": [
+    {"type": "title", "dur": 3.0, "lines": [{"t": "C'EST", "color": "white"}, {"t": "FINI.", "color": "gold"}],
+     "sub": ["Cristiano Ronaldo", "prend sa retraite internationale"], "pill": "ANNONCE DU 5 NOVEMBRE 2026"},
+    {"type": "counters", "dur": 4.5, "top": "23 ANS AVEC LE PORTUGAL",
+     "items": [{"value": 234, "label": "SÉLECTIONS"}, {"value": 146, "label": "BUTS"}],
+     "badge": "Record mondial chez les hommes"},
+    {"type": "cards", "dur": 3.5, "title": "SON PALMARÈS", "subtitle": "avec la Seleção",
+     "items": ["EURO 2016", "LIGUE DES NATIONS 2019", "LIGUE DES NATIONS 2025"]},
+    {"type": "progress", "dur": 5.0, "top": "ET MAINTENANT ?", "value": 985, "from": 900, "label": "BUTS EN CARRIÈRE",
+     "target": 1000, "big": "PLUS QUE 15", "sub": "… et ce sera avec Al Nassr", "source": "chiffres au 05/11/2026"},
+    {"type": "poll", "dur": 3.0, "lines": [{"t": "LES 1000 BUTS", "color": "white"}, {"t": "CETTE SAISON ?", "color": "gold"}],
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}]}
+  ]
+}
