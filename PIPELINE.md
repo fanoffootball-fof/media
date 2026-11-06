@@ -5,30 +5,65 @@ Propriétaire : Olivier. Compte TikTok : `fanoffootball_fof`, publié via Metric
 
 ## Campagne
 
-- Du **samedi 7 novembre au vendredi 4 décembre 2026** inclus : **2 vidéos par jour, à 12:00 et 18:00** (heure de Paris).
-- Joueurs suivis : **Cristiano Ronaldo, Kylian Mbappé, Lamine Yamal, Désiré Doué**. On peut ajouter au plus un joueur « du moment » par semaine si l'actu le justifie.
-- Chaque joueur du noyau apparaît au moins 3 fois par semaine ; jamais deux fois de suite le même joueur dans la même journée sauf grosse actu.
+- Du **samedi 7 novembre au vendredi 4 décembre 2026** inclus : **2 vidéos par jour, à 12:00 et 18:00** (heure de Paris). On reste à 2 par jour.
+- Objectif : des vidéos **virales** sur le foot, avec **beaucoup de joueurs différents** (pas de joueur favori).
+- **Diversité :** deux joueurs différents chaque jour ; un même joueur au plus **2 fois par semaine** (sauf très grosse actu) ; alterner joueurs actuels et légendes. Vérifier dans `journal.md`.
+- Les vidéos restent courtes (15 à 25 s). Le format long (≥ 1 min, seul rémunéré par TikTok) ne démarre qu'après accord d'Olivier.
+
+## Réservoir de joueurs : top 5 du Ballon d'Or (éditions 2006 à 2026, pas d'édition en 2020)
+
+| année | 1er | 2e | 3e | 4e | 5e |
+|---|---|---|---|---|---|
+| 2006 | Cannavaro | Buffon | Henry | Ronaldinho | Zidane |
+| 2007 | Kaká | C. Ronaldo | Messi | Drogba | Pirlo |
+| 2008 | C. Ronaldo | Messi | Torres | Casillas | Xavi |
+| 2009 | Messi | C. Ronaldo | Xavi | Iniesta | Eto'o |
+| 2010 | Messi | Iniesta | Xavi | Sneijder | Forlán |
+| 2011 | Messi | C. Ronaldo | Xavi | Iniesta | Rooney |
+| 2012 | Messi | C. Ronaldo | Iniesta | Xavi | Falcao |
+| 2013 | C. Ronaldo | Messi | Ribéry | Ibrahimović | Neymar |
+| 2014 | C. Ronaldo | Messi | Neuer | Robben | Müller |
+| 2015 | Messi | C. Ronaldo | Neymar | Lewandowski | Suárez |
+| 2016 | C. Ronaldo | Messi | Griezmann | Suárez | Neymar |
+| 2017 | C. Ronaldo | Messi | Neymar | Buffon | Modrić |
+| 2018 | Modrić | C. Ronaldo | Griezmann | Mbappé | Messi |
+| 2019 | Messi | Van Dijk | C. Ronaldo | Mané | Salah |
+| 2021 | Messi | Lewandowski | Jorginho | Benzema | Kanté |
+| 2022 | Benzema | Mané | De Bruyne | Lewandowski | Salah |
+| 2023 | Messi | Haaland | Mbappé | De Bruyne | Rodri |
+| 2024 | Rodri | Vinícius Jr | Bellingham | Carvajal | Lautaro Martínez |
+| 2025 | Dembélé | Yamal | Vitinha | Salah | Raphinha |
+| 2026 | Kane | Mbappé | Yamal | Rodri | Messi |
+
+Tableau établi le 06/11/2026 : revérifier un rang ou un chiffre avant de l'utiliser dans une vidéo. Les joueurs à l'actu de la semaine (hors liste) sont permis, au plus 3 fois par semaine en tout.
 
 ## Rotation des formats
 
 | jour | 12:00 | 18:00 |
 |---|---|---|
-| lundi | stats d'un joueur (`counters` / `progress`) | quiz « devine le joueur » |
-| mardi | duel entre deux joueurs (`duel`) | sondage / débat (`poll`) |
+| lundi | stats d'un joueur actuel en forme (`counters` / `progress`) | quiz « devine le joueur » (légende) |
+| mardi | duel (légende vs légende ou légende vs actuel, carrière comparée) | débat « Ballon d'Or volé ? » (`poll`) |
 | mercredi | actu de la semaine (Ligue des champions, etc.) | « le saviez-vous » (`cards`) |
 | jeudi | record ou objectif en cours (`progress`) | quiz « devine le joueur » |
-| vendredi | duel | top 3 (`cards` numérotées) |
+| vendredi | duel entre joueurs actuels | top 3 (`cards` numérotées : records, buts, titres) |
 | samedi | stats avant le week-end | quiz « devine le joueur » |
-| dimanche | bilan du week-end (buts, notes, records) | sondage / débat |
+| dimanche | bilan du week-end (buts, notes, records) | sondage / débat entre légendes |
 
 Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, Ballon d'Or…) passe devant la rotation au créneau suivant.
-Chaque vidéo finit par une question qui pousse au commentaire.
+
+## Recettes virales
+
+- **Accroche dans la 1re seconde** : chiffre choc, question clivante ou affirmation forte (« Le Ballon d'Or le plus volé de l'histoire ? »).
+- Des débats qui font réagir sans être insultants : Ballon d'Or contesté, meilleur joueur d'une génération, duel de légendes.
+- Toujours finir par une question fermée (2 ou 3 choix) qui pousse au commentaire.
+- Varier les accents de couleur et les `seed` pour que deux vidéos d'affilée ne se ressemblent pas.
 
 ## Procédure (à suivre dans l'ordre)
 
 1. **Date.** Si on est après le 4 décembre 2026 : ne rien produire, prévenir Olivier que la campagne est terminée et qu'il peut supprimer la tâche planifiée. Fin.
 2. **Créneaux libres.** Charger les outils Metricool (ToolSearch `select:mcp__Metricool_Social_Media_Management__getScheduledPosts,mcp__Metricool_Social_Media_Management__createScheduledPost`), puis `getScheduledPosts` (brandId `7925135`, timezone `Europe/Paris`) sur la journée. Un créneau déjà occupé (post à 12:00 ou 18:00) est laissé tel quel. Si les deux le sont : fin. Si l'heure d'un créneau est déjà passée ou à moins de 20 min : le sauter.
-3. **Contexte.** Lire `journal.md` (sujets et joueurs déjà traités : ne pas répéter un sujet ni un quiz).
+3. **Contexte.** Lire `journal.md` (sujets et joueurs déjà traités : ne pas répéter un sujet ni un quiz, respecter la règle de diversité).
+   **Abonnés.** Avec les outils d'analytics Metricool (`getAnalyticsAvailableMetrics` puis `getAnalyticsDataByMetrics`, réseau TikTok), relever le nombre d'abonnés. S'il atteint **10 000**, l'écrire en première ligne du compte rendu (« Seuil des 10 000 abonnés atteint : on peut lancer le format long d'1 minute »), sans rien changer d'autre.
 4. **Recherche.** Pour chaque créneau libre, choisir le format (rotation) et le joueur, puis vérifier **chaque chiffre et chaque fait** avec WebSearch + WebFetch du jour (Foot Mercato, FotMob, L'Équipe, sites officiels des clubs/ligues, Transfermarkt). Si deux sources divergent, en choisir une seule pour tous les chiffres de la vidéo et la citer avec la date dans `source`. Un fait non vérifié n'entre pas dans la vidéo. Indices de quiz : faits stables et vérifiables (lieu et année de naissance, clubs, titres).
 5. **Spec.** Écrire `specs/AAAA-MM-JJ_HHMM_sujet.json` (format : `tools/SPEC.md`, exemples : `specs/exemples/`). 15 à 25 s, 4 à 6 scènes, `seed` différent à chaque vidéo.
 6. **Contrôle.** `python3 tools/make_video.py <spec> --stills /tmp/stills_<sujet>` puis ouvrir chaque image avec Read : aucun texte coupé, superposé ou trop près des bords ; orthographe et accents corrects ; chiffres identiques aux sources. Corriger et recommencer si besoin.
