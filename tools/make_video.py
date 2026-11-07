@@ -22,6 +22,7 @@ from scipy.io import wavfile  # noqa: E402
 
 import music  # noqa: E402
 from pitch import PitchView  # noqa: E402
+from pitch3d import View3D  # noqa: E402
 from engine import (FPS, GOLD, GREY, H, W, WHITE, assemble, bar_lr, ease_back,  # noqa: E402
                     ease_out, fit_size, font, make_background, make_split_background, prog, put,
                     render_scene, render_still, rrect, text)
@@ -403,7 +404,7 @@ def scene_elements(sc, ctx):
             els.append(Pill(sc["pill"], "white", "white", 40, 0.14))
     elif t == "quiz_clue":
         return quiz_elements(sc, ctx)
-    elif t == "pitch":
+    elif t in ("pitch", "pitch3d"):
         return pitch_elements(sc, ctx)
     elif t == "custom":
         for e in sc["elements"]:
@@ -465,6 +466,8 @@ def quiz_elements(sc, ctx):
 def pitch_elements(sc, ctx):
     """But refait en 2D : en-tête (pastille + titre) au-dessus d'un terrain animé (tools/pitch.py)."""
     els = []
+    if sc["type"] == "pitch3d":  # la 3D se dessine en premier, l'en-tête par-dessus
+        els.append(View3D(sc, col(sc.get("att_color", ctx["accent"]))))
     if sc.get("kicker"):
         p = Pill(sc["kicker"], "gold", "dark", 36)
         p.y = 365
@@ -475,7 +478,8 @@ def pitch_elements(sc, ctx):
         if sc.get("keep_header"):
             tt.start = -100
         els.append(tt)
-    els.append(PitchView(sc, col(sc.get("att_color", ctx["accent"]))))
+    if sc["type"] == "pitch":
+        els.append(PitchView(sc, col(sc.get("att_color", ctx["accent"]))))
     return els
 
 
@@ -548,7 +552,7 @@ def main():
     offset, t0, paths, cuts, ticks, hits = 0, 0.0, [], [], [], []
     prev_pitch = None
     for sc in spec["scenes"]:  # ralenti : reprend joueurs, ballon et légendes de la scène pitch précédente
-        if sc.get("type") == "pitch":
+        if sc.get("type") in ("pitch", "pitch3d"):
             if sc.get("replay") and prev_pitch:
                 for k in ("players", "ball", "goal_t", "captions", "view_from", "att_color"):
                     if k in prev_pitch and k not in sc:
@@ -565,7 +569,7 @@ def main():
         if a.stills:
             os.makedirs(a.stills, exist_ok=True)
             render_still(os.path.join(a.stills, f"scene_{i + 1:02d}.jpg"), bg, draw, n - 1, offset)
-            if sc.get("type") == "pitch":  # images intermédiaires pour contrôler l'animation
+            if sc.get("type") in ("pitch", "pitch3d"):  # images intermédiaires pour contrôler l'animation
                 for tag, k in (("a", n // 3), ("b", 2 * n // 3)):
                     render_still(os.path.join(a.stills, f"scene_{i + 1:02d}{tag}.jpg"), bg, draw, k, offset)
         else:

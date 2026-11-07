@@ -42,6 +42,11 @@ Toute scène accepte `"source": "Stats Foot Mercato, au 07/11/2026"` (petite men
   - `kicker`, `title` : en-tête au-dessus du terrain ; `keep_header` : true pour ne pas réanimer le titre.
   - `speed` (1 = temps réel, 0,6 = ralenti), `t0` (instant de départ), `replay` : true pour reprendre `players`, `ball`, `goal_t`, `captions` et `view_from` de la scène `pitch` précédente.
   - Les temps sont en secondes « réelles » depuis le début de l'action ; prévoir `dur` ≥ (dernier temps − `t0`) / `speed` + 1,5 s pour voir le « BUT ! ».
+- `pitch3d` — même but en 3D stylisée (moteur : `tools/pitch3d.py` + `tools/render3d/scene.js`, three.js fourni dans `tools/vendor/three` ; modèle : `specs/exemples/but_3d_zidane.json`). Stade de nuit, joueurs-mannequins sans visage ni logo, ballon avec sa vraie hauteur. Mêmes champs que `pitch` (sauf `view_from`), plus :
+  - `camera` : `{"mode": "follow"}` (caméra aérienne qui suit l'action, par défaut) ou `{"mode": "goal"}` (en hauteur derrière le but adverse, idéal pour le ralenti) ; réglages facultatifs `height`, `back`, `fov`, `side`.
+  - Ballon : 4e valeur d'une image clé = mots séparés par des espaces : `air` (centre, lob), `z=0.7` (hauteur d'arrivée en m, ex. une volée), `high` / `low` (frappe qui finit haut ou à ras de terre dans le but).
+  - `def_color` : couleur des défenseurs (rouge par défaut en 3D).
+  - Rendu lent (≈ 0,7 s par image, soit 3 à 4 min pour 10 s de 3D) : Chrome sans écran + Playwright, déjà présents dans l'environnement.
 - `custom` — `elements` libres, empilés et centrés : `{"kind": "big"|"text"|"pill"|"counter"|"card"|"bar"|"options"|"chips"|"box"|"spacer", ...}` (mêmes champs que ci-dessus).
 
 ## Règles de mise en page

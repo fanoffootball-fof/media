@@ -149,7 +149,7 @@ class Mover:
     """Trajectoire par images clés [x, y, t] ou [x, y, t, "air"] (segment aérien jusqu'à ce point)."""
 
     def __init__(self, path, kind="player"):
-        self.k = sorted(((float(p[0]), float(p[1]), float(p[2]), len(p) > 3 and p[3] == "air") for p in path),
+        self.k = sorted(((float(p[0]), float(p[1]), float(p[2]), len(p) > 3 and "air" in str(p[3]).split()) for p in path),
                         key=lambda q: q[2])
         self.kind = kind
         for x, y, _, _ in self.k:
