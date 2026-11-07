@@ -1,0 +1,15 @@
+{
+  "accent": "orange",
+  "seed": 41,
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "QUIZ FOOT", "lines": [{"t": "DEVINE", "color": "white"}, {"t": "LA LÉGENDE", "color": "gold"}],
+     "sub": ["en 3 indices", "Mets pause si tu as trouvé"]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 0, "clues": [["Né à Abidjan", "en 1978"], ["Passé par Guingamp et l'OM", "avant de signer à Chelsea en 2004"], ["But à la 88e en finale", "et tir au but décisif · LdC 2012"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 1, "clues": [["Né à Abidjan", "en 1978"], ["Passé par Guingamp et l'OM", "avant de signer à Chelsea en 2004"], ["But à la 88e en finale", "et tir au but décisif · LdC 2012"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 2, "clues": [["Né à Abidjan", "en 1978"], ["Passé par Guingamp et l'OM", "avant de signer à Chelsea en 2004"], ["But à la 88e en finale", "et tir au but décisif · LdC 2012"]]},
+    {"type": "reveal", "dur": 3.0, "pre": "C'EST…", "lines": ["DIDIER", "DROGBA"], "sub": "Meilleur buteur de la Côte d'Ivoire", "pill": "65 buts en 105 sélections",
+     "source": "Wikipédia, consulté le 07/11/2026"},
+    {"type": "poll", "dur": 3.0, "lines": [{"t": "LE MEILLEUR", "color": "white"}, {"t": "AVANT-CENTRE", "color": "gold"}, {"t": "AFRICAIN ?", "color": "gold"}], "size": 110,
+     "options": [{"label": "DROGBA", "color": "orange"}, {"label": "ETO'O", "color": "green"}, {"label": "WEAH", "color": "blue"}], "cta": "Ton choix en commentaire"}
+  ]
+}
