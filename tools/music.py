@@ -657,7 +657,23 @@ def cheer(dur=3.2):
     return x * (1 - np.exp(-t / 0.1)) * np.exp(-t / 1.2)
 
 
-def build(duration, cuts, seed=7, ticks=(), style=None, hits=()):
+_SIG = None
+
+
+def signature():
+    """Signature sonore du compte, identique sur chaque vidéo : deux coups de sifflet (« coup d'envoi »)."""
+    global RNG, _SIG
+    if _SIG is None:
+        saved, RNG = RNG, np.random.default_rng(2026)  # graine fixe : même son à chaque vidéo
+        out = np.zeros(int(0.6 * SR))
+        add(out, whistle(0.10), 0.0)
+        add(out, whistle(0.30), 0.18)
+        RNG = saved
+        _SIG = out
+    return _SIG
+
+
+def build(duration, cuts, seed=7, ticks=(), style=None, hits=(), sig=True):
     global RNG
     RNG = np.random.default_rng(seed)
     style = pick_style(style, seed)
@@ -679,6 +695,10 @@ def build(duration, cuts, seed=7, ticks=(), style=None, hits=()):
         for h in hits:
             add(mix, impact(), h, IMPACT_GAIN[style])
             add(mix, ch, h)
+    if sig:  # signature du compte au tout début, au niveau moyen de la musique
+        s = signature()
+        level = np.sqrt(np.mean(mix ** 2)) + 1e-9
+        add(mix, s, 0.05, 1.1 * level / (np.sqrt(np.mean(s[np.abs(s) > 1e-4] ** 2)) + 1e-9))
     mix = mix[: int(duration * SR)]
     mix -= np.mean(mix)
     fade = int(0.6 * SR)

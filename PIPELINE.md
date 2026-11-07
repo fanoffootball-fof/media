@@ -10,7 +10,7 @@ Propriétaire : Olivier. Compte TikTok : `fanoffootball_fof` et chaîne YouTube 
 - Du **samedi 7 novembre au vendredi 4 décembre 2026** inclus : **2 vidéos par jour, à 12:00 et 18:00** (heure de Paris). On reste à 2 par jour.
 - Objectif : des vidéos **virales** sur le foot, avec **beaucoup de joueurs différents** (pas de joueur favori).
 - **Diversité :** deux joueurs différents chaque jour ; un même joueur au plus **2 fois par semaine** (sauf très grosse actu) ; alterner joueurs actuels et légendes. Vérifier dans `journal.md`.
-- Les vidéos restent courtes (15 à 25 s). Le format long (≥ 1 min, seul rémunéré par TikTok) ne démarre qu'après accord d'Olivier.
+- Les vidéos restent courtes (15 à 25 s). Choix d'Olivier : **pas de format long (≥ 1 min) tant que les conditions de monétisation ne sont pas remplies** (10 000 abonnés et 100 000 vues sur 30 jours). D'ici là, tout l'effort va à la croissance : vues, partages et surtout **conversion en abonnés**. Le format long ne démarre ensuite qu'après accord d'Olivier.
 
 ## Réservoir de joueurs : top 5 du Ballon d'Or (éditions 2006 à 2026, pas d'édition en 2020)
 
@@ -90,7 +90,15 @@ Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, 
 - **Accroche dans la 1re seconde** : chiffre choc, question clivante ou affirmation forte (« Le Ballon d'Or le plus volé de l'histoire ? »).
 - Des débats qui font réagir sans être insultants : Ballon d'Or contesté, meilleur joueur d'une génération, duel de légendes.
 - Toujours finir par une question fermée (2 ou 3 choix) qui pousse au commentaire.
+- **Mot-clé de recherche partout** : le nom du joueur (ou le duel) est écrit en gros dans la 1re scène et ouvre la légende et le titre YouTube. TikTok lit le texte à l'écran et la légende pour classer la vidéo dans sa recherche.
+- **Séries numérotées** (on s'abonne pour voir la suite) : les formats récurrents portent leur numéro dans la pastille de la 1re scène — « CE JOUR-LÀ N°<n> », « BUT REFAIT N°<n> », « CHOIX IMPOSSIBLE N°<n> », « PRONOSTIC N°<n> », avec n = nombre de vidéos de ce format déjà dans `journal.md` + 1.
+- **Rotation des appels à l'action** (le `cta` de la dernière scène), d'une vidéo à l'autre, dans cet ordre :
+  1. **commentaire** : « Ton choix en commentaire », « Ton score exact en commentaire »… (formule variée) ;
+  2. **partage** : « Envoie-la à ton pote qui dit le contraire » / « Envoie-la à un fan de <club ou joueur> » ;
+  3. **abonnement**, seulement pour un format récurrent : « Abonne-toi : <format> chaque <jour> » (ex. « Abonne-toi : Ce jour-là chaque mercredi ») ; pour un autre format, passer directement au type suivant.
+  Le type de `cta` utilisé est noté dans `journal.md` (colonne `cta`) ; reprendre la rotation après celui de la dernière vidéo publiée.
 - Varier les accents de couleur et les `seed` pour que deux vidéos d'affilée ne se ressemblent pas.
+- **Signature sonore** : `tools/music.py` ouvre chaque vidéo par deux coups de sifflet (toujours les mêmes), pour qu'on reconnaisse le compte à l'oreille. Ne pas la désactiver (`"signature": false` n'est prévu que pour un test).
 - **Musique** : champ `music` obligatoire dans chaque spec, en rotation `stade` → `samba` → `epique` → `electro` → `stade`… Prendre l'ambiance qui suit celle de la dernière spec (dernier fichier de `specs/` par ordre alphabétique, hors `exemples/`) ; si elle n'a pas de champ `music`, commencer par `stade`. Deux vidéos d'affilée n'ont jamais la même ambiance.
 
 ## Procédure (à suivre dans l'ordre)
@@ -126,8 +134,8 @@ Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, 
                    "category": "SPORTS", "madeForKids": false, "isAiGeneratedContent": false}
    ```
    Pour un quiz, ni le titre ni les tags ne révèlent la réponse. Si l'un des deux posts est refusé, garder l'autre et recopier l'erreur dans le compte rendu.
-10. **Journal.** Ajouter une ligne par vidéo dans `journal.md` (date, heure, format, joueur(s), sujet, fichier, sources, id Metricool sous la forme `TT 123 / YT 456`), commit + push.
-11. **Compte rendu.** Terminer par 2 ou 3 lignes pour Olivier : ce qui est programmé, et tout problème rencontré.
+10. **Journal.** Ajouter une ligne par vidéo dans `journal.md` (date, heure, format, joueur(s), sujet, `cta` : commentaire / partage / abonnement, fichier, sources, id Metricool sous la forme `TT 123 / YT 456`), commit + push.
+11. **Compte rendu.** Pour Olivier, une ligne par vidéo programmée : heure, format, joueur, **l'accroche de la 1re scène et la question finale, mot pour mot**. Il peut ainsi les relire et, s'il le souhaite, modifier la légende dans Metricool avant la publication (sans que rien ne l'attende : la publication reste automatique). Puis tout problème rencontré.
 
 ## Règles permanentes
 
