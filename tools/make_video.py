@@ -21,6 +21,7 @@ from PIL import Image, ImageDraw  # noqa: E402
 from scipy.io import wavfile  # noqa: E402
 
 import music  # noqa: E402
+import voice  # noqa: E402
 from pitch import PitchView  # noqa: E402
 from pitch3d import View3D  # noqa: E402
 from engine import (FPS, GOLD, GREY, H, W, WHITE, assemble, bar_lr, ease_back,  # noqa: E402
@@ -536,6 +537,7 @@ def main():
     ap.add_argument("--stills")
     a = ap.parse_args()
     spec = json.load(open(a.spec, encoding="utf-8"))
+    clips = voice.prepare(spec, a.spec, strict=not a.stills)  # voix off : allonge les scènes si besoin
 
     acc = spec.get("accent", "red")
     if isinstance(acc, dict) and "split" in acc:
@@ -586,7 +588,8 @@ def main():
     silent = os.path.join(work, "silent.mp4")
     assemble(paths, silent)
     wav = os.path.join(work, "music.wav")
-    wavfile.write(wav, music.SR, music.build(t0, cuts, spec.get("seed", 7), ticks, spec.get("music"), hits, spec.get("signature", True)))
+    track = music.build(t0, cuts, spec.get("seed", 7), ticks, spec.get("music"), hits, spec.get("signature", True))
+    wavfile.write(wav, music.SR, voice.mix(track, spec, clips))
     tmp = a.out[:-4] + ".part.mp4"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", silent, "-i", wav, "-map", "0:v", "-map", "1:a",
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",

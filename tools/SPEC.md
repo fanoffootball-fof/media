@@ -16,6 +16,7 @@ et calé sur les changements de scène ; les comptes à rebours des quiz ajouten
 | `seed` | entier : varie les détails du son d'une vidéo à l'autre |
 | `music` | ambiance sonore : `"stade"` (hymne de stade, cuivres, foule), `"samba"` (batucada, sifflet), `"epique"` (bande-annonce, tambours, cordes) ou `"electro"` (hymne électro de résumé de match). `"phonk"` (ancien beat) reste possible mais hors rotation. Sans ce champ, l'ambiance découle de `seed`. |
 | `signature` | `true` par défaut : deux coups de sifflet (signature sonore du compte) au tout début. `false` seulement pour un test. |
+| `voice_speed` | voix off : vitesse de la voix (défaut `1.0`). Chaque scène accepte `"say": "réplique"` (voix off, scène allongée si besoin, audio produit par l'Action « Voix off ElevenLabs » dans `voice/<nom de la spec>/`). Pas encore utilisée sur ce compte. |
 | `scenes` | liste des scènes (ci-dessous) |
 
 Couleurs : `white gold grey light red green blue pink purple orange cyan dark`, ou `"#RRGGBB"`.

@@ -98,6 +98,7 @@ Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, 
   3. **abonnement**, seulement pour un format récurrent : « Abonne-toi : <format> chaque <jour> » (ex. « Abonne-toi : Ce jour-là chaque mercredi ») ; pour un autre format, passer directement au type suivant.
   Le type de `cta` utilisé est noté dans `journal.md` (colonne `cta`) ; reprendre la rotation après celui de la dernière vidéo publiée.
 - Varier les accents de couleur et les `seed` pour que deux vidéos d'affilée ne se ressemblent pas.
+- **Voix off** : l'outil existe (`tools/voice.py`, `tools/tts.py`, Action « Voix off ElevenLabs ») mais elle est en test sur @scamoupas. Ne pas mettre de `say` dans les specs de ce compte sans consigne d'Olivier.
 - **Signature sonore** : `tools/music.py` ouvre chaque vidéo par deux coups de sifflet (toujours les mêmes), pour qu'on reconnaisse le compte à l'oreille. Ne pas la désactiver (`"signature": false` n'est prévu que pour un test).
 - **Musique** : champ `music` obligatoire dans chaque spec, en rotation `stade` → `samba` → `epique` → `electro` → `stade`… Prendre l'ambiance qui suit celle de la dernière spec (dernier fichier de `specs/` par ordre alphabétique, hors `exemples/`) ; si elle n'a pas de champ `music`, commencer par `stade`. Deux vidéos d'affilée n'ont jamais la même ambiance.
 
