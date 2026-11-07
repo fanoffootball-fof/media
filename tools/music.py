@@ -649,7 +649,15 @@ def pick_style(style, seed):
     return ROTATION[seed % len(ROTATION)]
 
 
-def build(duration, cuts, seed=7, ticks=(), style=None):
+def cheer(dur=3.2):
+    """Clameur de la foule sur un but."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    x = crowd(n) + 0.5 * bp(noise(n), 350, 1200) * smooth_random(n, 9.0, 0.5, 1.0)
+    return x * (1 - np.exp(-t / 0.1)) * np.exp(-t / 1.2)
+
+
+def build(duration, cuts, seed=7, ticks=(), style=None, hits=()):
     global RNG
     RNG = np.random.default_rng(seed)
     style = pick_style(style, seed)
@@ -664,6 +672,13 @@ def build(duration, cuts, seed=7, ticks=(), style=None):
     for c in ticks:
         add(fx, tk, c, 1.4)
     mix = mix + fx * IMPACT_GAIN[style]
+    if hits:  # buts : impact + clameur, au niveau de la musique
+        level = np.sqrt(np.mean(mix ** 2)) + 1e-9
+        ch = cheer()
+        ch *= 1.3 * level / (np.sqrt(np.mean(ch[: int(1.5 * SR)] ** 2)) + 1e-9)
+        for h in hits:
+            add(mix, impact(), h, IMPACT_GAIN[style])
+            add(mix, ch, h)
     mix = mix[: int(duration * SR)]
     mix -= np.mean(mix)
     fade = int(0.6 * SR)

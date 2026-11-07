@@ -21,6 +21,7 @@ from PIL import Image, ImageDraw  # noqa: E402
 from scipy.io import wavfile  # noqa: E402
 
 import music  # noqa: E402
+from pitch import PitchView  # noqa: E402
 from engine import (FPS, GOLD, GREY, H, W, WHITE, assemble, bar_lr, ease_back,  # noqa: E402
                     ease_out, fit_size, font, make_background, make_split_background, prog, put,
                     render_scene, render_still, rrect, text)
@@ -402,6 +403,8 @@ def scene_elements(sc, ctx):
             els.append(Pill(sc["pill"], "white", "white", 40, 0.14))
     elif t == "quiz_clue":
         return quiz_elements(sc, ctx)
+    elif t == "pitch":
+        return pitch_elements(sc, ctx)
     elif t == "custom":
         for e in sc["elements"]:
             els.append(custom_el(e, ctx))
@@ -459,6 +462,23 @@ def quiz_elements(sc, ctx):
     return els
 
 
+def pitch_elements(sc, ctx):
+    """But refait en 2D : en-tête (pastille + titre) au-dessus d'un terrain animé (tools/pitch.py)."""
+    els = []
+    if sc.get("kicker"):
+        p = Pill(sc["kicker"], "gold", "dark", 36)
+        p.y = 365
+        els.append(p)
+    if sc.get("title"):
+        tt = Big(sc["title"], "white", 84)
+        tt.y = 465
+        if sc.get("keep_header"):
+            tt.start = -100
+        els.append(tt)
+    els.append(PitchView(sc, col(sc.get("att_color", ctx["accent"]))))
+    return els
+
+
 def layout(els, dur_frames, center=930):
     # départs échelonnés (sauf éléments déjà positionnés/démarrés)
     t = 0
@@ -495,11 +515,13 @@ def build_scene(sc, ctx, dur_frames):
             e.draw(fr, f, e.cy)
         if source:
             text(fr, source, W / 2, 1420, "med", 30, GREY, alpha=ease_out(prog(f, 20, 10)))
-    ticks = []
+    ticks, hits = [], []
     for e in els:
         if isinstance(e, Countdown):
             ticks += [(e.start / FPS) + k for k in (0, 1, 2)]
-    return draw, ticks
+        if hasattr(e, "hits"):
+            hits += e.hits()
+    return draw, ticks, hits
 
 
 # ---------------------------------------------------------------- main
@@ -523,17 +545,29 @@ def main():
     ctx.update({"left_name": spec.get("left_name", ""), "right_name": spec.get("right_name", "")})
 
     work = tempfile.mkdtemp(prefix="fof_")
-    offset, t0, paths, cuts, ticks = 0, 0.0, [], [], []
+    offset, t0, paths, cuts, ticks, hits = 0, 0.0, [], [], [], []
+    prev_pitch = None
+    for sc in spec["scenes"]:  # ralenti : reprend joueurs, ballon et légendes de la scène pitch précédente
+        if sc.get("type") == "pitch":
+            if sc.get("replay") and prev_pitch:
+                for k in ("players", "ball", "goal_t", "captions", "view_from", "att_color"):
+                    if k in prev_pitch and k not in sc:
+                        sc[k] = prev_pitch[k]
+            prev_pitch = sc
     for i, sc in enumerate(spec["scenes"]):
         dur = max(1.5, round(float(sc.get("dur", 3.5)) * 2) / 2)  # grille de 0,5 s (calée sur le tempo)
         n = int(round(dur * FPS))
-        draw, tks = build_scene(sc, ctx, n)
+        draw, tks, hts = build_scene(sc, ctx, n)
         ticks += [t0 + x for x in tks]
+        hits += [t0 + x for x in hts if x < dur]
         if i > 0:
             cuts.append(t0)
         if a.stills:
             os.makedirs(a.stills, exist_ok=True)
             render_still(os.path.join(a.stills, f"scene_{i + 1:02d}.jpg"), bg, draw, n - 1, offset)
+            if sc.get("type") == "pitch":  # images intermédiaires pour contrôler l'animation
+                for tag, k in (("a", n // 3), ("b", 2 * n // 3)):
+                    render_still(os.path.join(a.stills, f"scene_{i + 1:02d}{tag}.jpg"), bg, draw, k, offset)
         else:
             p = os.path.join(work, f"s{i:02d}.mp4")
             render_scene(p, n, bg, draw, offset)
@@ -548,7 +582,7 @@ def main():
     silent = os.path.join(work, "silent.mp4")
     assemble(paths, silent)
     wav = os.path.join(work, "music.wav")
-    wavfile.write(wav, music.SR, music.build(t0, cuts, spec.get("seed", 7), ticks, spec.get("music")))
+    wavfile.write(wav, music.SR, music.build(t0, cuts, spec.get("seed", 7), ticks, spec.get("music"), hits))
     tmp = a.out[:-4] + ".part.mp4"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", silent, "-i", wav, "-map", "0:v", "-map", "1:a",
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",

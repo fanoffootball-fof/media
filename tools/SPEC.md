@@ -32,6 +32,16 @@ Toute scène accepte `"source": "Stats Foot Mercato, au 07/11/2026"` (petite men
 - `poll` — appel au commentaire : `lines`, `options` = `[{"label": "OUI", "color": "green"}]` (2 ou 3), `filled` (false = boutons discrets), `cta`, `size` (défaut 130).
 - `quiz_clue` — indice de quiz avec compte à rebours 3 s : `clues` (les 3 indices, toujours la même liste), `index` (0, 1 puis 2), `title`, `kicker`. Prévoir `dur: 4.0`.
 - `reveal` — réponse : `pre` ("C'EST…"), `lines` (nom en doré), `sub`, `pill`.
+- `pitch` — but refait en 2D (moteur : `tools/pitch.py`, modèle : `specs/exemples/but_2d_zidane.json`). Terrain vu de dessus, l'équipe qui attaque monte vers le haut.
+  - Coordonnées : `x` 0 → 100 de la ligne de touche gauche à la droite ; `y` 0 → 100 de sa propre ligne de but à la ligne de but adverse (au-delà de 100 : dans le but, filet jusqu'à ≈ 101,9). Repères : surface de réparation x 20,4 à 79,6 et y ≥ 84,3 ; point de penalty (50 ; 89,5) ; poteaux x 44,6 et 55,4.
+  - `view_from` : partie du terrain affichée à partir de ce `y` (50 par défaut = moitié adverse ; 30 pour une action qui part de plus loin, le terrain rétrécit).
+  - `players` : `[{"team": "att"|"def"|"gk", "label": "Zidane", "star": true, "path": [[x, y, t], ...]}]` ; `att` prend la couleur `accent` (ou `att_color`), `def` est blanc, `gk` jaune ; `star` = cercle doré et course en pointillés ; `label` seulement pour les joueurs cités par la source.
+  - `ball` : `[[x, y, t], ...]` ; ajouter `"air"` en 4e valeur pour un segment aérien (centre, lob) jusqu'à ce point. Une trace dorée suit le ballon.
+  - `goal_t` : instant (s) où le ballon franchit la ligne → flash, « BUT ! » et clameur de foule dans le son.
+  - `captions` : `[[t, "Solari lance Roberto Carlos"], ...]` (légende du moment, sous le terrain).
+  - `kicker`, `title` : en-tête au-dessus du terrain ; `keep_header` : true pour ne pas réanimer le titre.
+  - `speed` (1 = temps réel, 0,6 = ralenti), `t0` (instant de départ), `replay` : true pour reprendre `players`, `ball`, `goal_t`, `captions` et `view_from` de la scène `pitch` précédente.
+  - Les temps sont en secondes « réelles » depuis le début de l'action ; prévoir `dur` ≥ (dernier temps − `t0`) / `speed` + 1,5 s pour voir le « BUT ! ».
 - `custom` — `elements` libres, empilés et centrés : `{"kind": "big"|"text"|"pill"|"counter"|"card"|"bar"|"options"|"chips"|"box"|"spacer", ...}` (mêmes champs que ci-dessus).
 
 ## Règles de mise en page

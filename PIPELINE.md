@@ -43,13 +43,45 @@ Tableau établi le 06/11/2026 : revérifier un rang ou un chiffre avant de l'uti
 |---|---|---|
 | lundi | stats d'un joueur actuel en forme (`counters` / `progress`) | quiz « devine le joueur » (légende) |
 | mardi | duel (légende vs légende ou légende vs actuel, carrière comparée) | débat « Ballon d'Or volé ? » (`poll`) |
-| mercredi | actu de la semaine (Ligue des champions, etc.) | « le saviez-vous » (`cards`) |
+| mercredi | actu de la semaine (Ligue des champions, etc.) | « Ce jour-là » (éphéméride, voir plus bas) |
 | jeudi | record ou objectif en cours (`progress`) | quiz « devine le joueur » |
 | vendredi | duel entre joueurs actuels | top 3 (`cards` numérotées : records, buts, titres) |
-| samedi | stats avant le week-end | quiz « devine le joueur » |
-| dimanche | bilan du week-end (buts, notes, records) | sondage / débat entre légendes |
+| samedi | stats avant le week-end | but refait en 2D (scène `pitch`, voir plus bas) |
+| dimanche | bilan du week-end (buts, notes, records) | choix impossible (voir plus bas) |
 
 Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, Ballon d'Or…) passe devant la rotation au créneau suivant.
+
+**Jour de gros match : le pronostic passe devant tout** (y compris une grosse actu, qui prend alors l'autre créneau). Le format de la rotation qu'il remplace est sauté ce jour-là, pas reporté.
+
+## Formats spéciaux
+
+### Pronostic (prioritaire les jours de gros match)
+
+- **Repérage, chaque jour à l'étape 3** : chercher les matchs du jour et leurs heures de coup d'envoi (WebSearch + WebFetch : L'Équipe, Foot Mercato, sites officiels).
+- **Gros match** = un match de l'équipe de France ; un match de Ligue des champions avec un club français, ou entre deux clubs de cette liste : Real Madrid, Barcelone, Atlético, Bayern, Dortmund, Manchester City, Liverpool, Arsenal, Chelsea, Manchester United, Inter, Milan, Juventus, PSG ; tout match de Ligue des champions à élimination directe ; PSG-OM, OM-OL, PSG-OL ; Real-Barça, derby de Madrid ; Premier League entre deux clubs de la liste ; Inter-Milan, Inter-Juventus, Milan-Juventus ; Bayern-Dortmund ; toute finale.
+- **Créneau** : le dernier créneau qui tombe au moins 1 h avant le coup d'envoi (18:00 pour un match à 20:45 ou 21:00, 12:00 pour un coup d'envoi entre 13:00 et 18:59). Coup d'envoi avant 13:00 : pas de pronostic. Au plus un pronostic par jour, pour le plus gros match (équipe de France, puis club français, puis Real-Barça, puis le reste).
+- **Structure** : `title` (pastille « PRONOSTIC », l'affiche en gros, heure et compétition en sous-titre) → `duel` (forme sur les 5 derniers matchs, buts marqués, classement : chiffres vérifiés le jour même) → éventuellement `counters` (confrontations directes) → `poll` « QUI GAGNE ? » à 3 options (équipe 1 / NUL / équipe 2), cta « Ton score exact en commentaire ». Fond `split` aux couleurs des deux équipes, jamais de logo.
+- **Interdit** : cotes, sites de paris, toute incitation à parier.
+
+### Ce jour-là (mercredi 18:00)
+
+- Un événement marquant survenu **à la même date (jour et mois)** une année passée : but légendaire, titre, record, transfert, débuts d'un joueur. Priorité aux anniversaires ronds (10, 15, 20, 25, 30 ans…).
+- Date exacte vérifiée dans **deux sources** (Wikipédia + UEFA, FIFA, site du club ou presse).
+- **Structure** : `title` (pastille « CE JOUR-LÀ », « IL Y A 20 ANS » + le joueur ou l'équipe, la date en sous-titre) → `counters` ou `cards` (les faits) → `statement` (pourquoi c'est historique) → `poll`.
+- Rien de solide pour la date : se rabattre sur un « le saviez-vous » (`cards`).
+
+### But refait en 2D (samedi 18:00)
+
+- Un but célèbre (finale, but mythique d'une légende) ou un très grand but de la semaine. Modèle : `specs/exemples/but_2d_zidane.json`.
+- **Faits** : le déroulé (passeur, buteur, pied, type de frappe, contexte, date, score) est vérifié dans un compte rendu de match (UEFA.com, site du club, L'Équipe, Wikipédia). Les positions sont approximatives : chaque scène `pitch` porte `"source": "Reconstitution schématique · d'après <source>"`. Seuls les joueurs cités par la source ont un `label` ; les autres restent anonymes. Aucun détail invérifié dans les légendes (ex. ne pas dire « lucarne » si la source ne le dit pas).
+- **Structure** : `title` (accroche, nom du buteur en gros) → `pitch` à vitesse réelle (4,5 à 5,5 s) → `pitch` avec `"replay": true`, `"speed": 0.6` et `t0` au début de l'action décisive (5 à 6 s) → `statement` ou `counters` (contexte) → `poll`.
+- **Animation** : 3 à 6 joueurs impliqués, quelques défenseurs et le gardien ; une image clé toutes les 0,5 à 1,5 s ; le ballon reste collé au porteur (même position à ±1) ; `"air"` pour un centre ou une passe lobée ; `goal_t` = instant où le ballon franchit la ligne. Le contrôle visuel (étape 6) inclut les images intermédiaires `scene_XXa/b.jpg` : joueurs et ballon cohérents, étiquettes lisibles.
+
+### Choix impossible (dimanche 18:00)
+
+- « Tu ne peux en garder qu'un » : 3 manches de 2 joueurs (légendes et/ou actuels), par exemple un attaquant, un milieu, un gardien, ou « 2006 contre 2026 ».
+- **Structure** : `title` (pastille « CHOIX IMPOSSIBLE », « TU EN GARDES » / « UN SEUL ») → 3 scènes `poll` de 3,0 s (le thème de la manche en `lines`, les 2 joueurs en `options`, cta « Lequel tu gardes ? ») → `statement` final avec cta « Tes 3 choix en commentaire ».
+- Les joueurs de ce format ne comptent pas dans la limite de diversité ; ne pas reprendre la même paire de joueurs pendant la campagne.
 
 ## Recettes virales
 
