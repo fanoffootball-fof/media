@@ -1,6 +1,7 @@
 {
   "accent": "orange",
   "seed": 41,
+  "music": "stade",
   "scenes": [
     {"type": "title", "dur": 2.0, "kicker": "QUIZ FOOT", "lines": [{"t": "DEVINE", "color": "white"}, {"t": "LA LÉGENDE", "color": "gold"}],
      "sub": ["en 3 indices", "Mets pause si tu as trouvé"]},

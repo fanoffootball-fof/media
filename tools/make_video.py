@@ -548,7 +548,7 @@ def main():
     silent = os.path.join(work, "silent.mp4")
     assemble(paths, silent)
     wav = os.path.join(work, "music.wav")
-    wavfile.write(wav, music.SR, music.build(t0, cuts, spec.get("seed", 7), ticks))
+    wavfile.write(wav, music.SR, music.build(t0, cuts, spec.get("seed", 7), ticks, spec.get("music")))
     tmp = a.out[:-4] + ".part.mp4"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", silent, "-i", wav, "-map", "0:v", "-map", "1:a",
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",

@@ -4,8 +4,8 @@ Une spec décrit une vidéo verticale 1080×1920 de 15 à 25 s, découpée en sc
 Rendu : `python3 tools/make_video.py specs/x.json videos/x.mp4`
 Contrôle visuel : `python3 tools/make_video.py specs/x.json --stills /tmp/stills_x` (dernière image de chaque scène).
 
-Le son (beat original généré en code, libre de droits) est ajouté automatiquement et calé sur les
-changements de scène ; les comptes à rebours des quiz ajoutent des « tic ».
+Le son (musique originale générée en code par `tools/music.py`, libre de droits) est ajouté automatiquement
+et calé sur les changements de scène ; les comptes à rebours des quiz ajoutent des « tic ».
 
 ## Racine
 
@@ -13,7 +13,8 @@ changements de scène ; les comptes à rebours des quiz ajoutent des « tic ».
 |---|---|
 | `accent` | couleur du halo de fond (`"red"`, `"blue"`, `"purple"`…) ou `{"split": ["blue", "pink"]}` pour un duel (gauche/droite) |
 | `left_name`, `right_name` | noms pour les scènes `duel` (si `split`) |
-| `seed` | entier : varie le beat d'une vidéo à l'autre |
+| `seed` | entier : varie les détails du son d'une vidéo à l'autre |
+| `music` | ambiance sonore : `"stade"` (hymne de stade, cuivres, foule), `"samba"` (batucada, sifflet), `"epique"` (bande-annonce, tambours, cordes) ou `"electro"` (hymne électro de résumé de match). `"phonk"` (ancien beat) reste possible mais hors rotation. Sans ce champ, l'ambiance découle de `seed`. |
 | `scenes` | liste des scènes (ci-dessous) |
 
 Couleurs : `white gold grey light red green blue pink purple orange cyan dark`, ou `"#RRGGBB"`.

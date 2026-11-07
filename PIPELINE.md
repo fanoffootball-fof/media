@@ -57,6 +57,7 @@ Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, 
 - Des débats qui font réagir sans être insultants : Ballon d'Or contesté, meilleur joueur d'une génération, duel de légendes.
 - Toujours finir par une question fermée (2 ou 3 choix) qui pousse au commentaire.
 - Varier les accents de couleur et les `seed` pour que deux vidéos d'affilée ne se ressemblent pas.
+- **Musique** : champ `music` obligatoire dans chaque spec, en rotation `stade` → `samba` → `epique` → `electro` → `stade`… Prendre l'ambiance qui suit celle de la dernière spec (dernier fichier de `specs/` par ordre alphabétique, hors `exemples/`) ; si elle n'a pas de champ `music`, commencer par `stade`. Deux vidéos d'affilée n'ont jamais la même ambiance.
 
 ## Procédure (à suivre dans l'ordre)
 
@@ -65,7 +66,7 @@ Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, 
 3. **Contexte.** Lire `journal.md` (sujets et joueurs déjà traités : ne pas répéter un sujet ni un quiz, respecter la règle de diversité).
    **Abonnés.** Avec les outils d'analytics Metricool (`getAnalyticsAvailableMetrics` puis `getAnalyticsDataByMetrics`, réseau TikTok), relever le nombre d'abonnés. S'il atteint **10 000**, l'écrire en première ligne du compte rendu (« Seuil des 10 000 abonnés atteint : on peut lancer le format long d'1 minute »), sans rien changer d'autre.
 4. **Recherche.** Pour chaque créneau libre, choisir le format (rotation) et le joueur, puis vérifier **chaque chiffre et chaque fait** avec WebSearch + WebFetch du jour (Foot Mercato, FotMob, L'Équipe, sites officiels des clubs/ligues, Transfermarkt). Si deux sources divergent, en choisir une seule pour tous les chiffres de la vidéo et la citer avec la date dans `source`. Un fait non vérifié n'entre pas dans la vidéo. Indices de quiz : faits stables et vérifiables (lieu et année de naissance, clubs, titres).
-5. **Spec.** Écrire `specs/AAAA-MM-JJ_HHMM_sujet.json` (format : `tools/SPEC.md`, exemples : `specs/exemples/`). 15 à 25 s, 4 à 6 scènes, `seed` différent à chaque vidéo.
+5. **Spec.** Écrire `specs/AAAA-MM-JJ_HHMM_sujet.json` (format : `tools/SPEC.md`, exemples : `specs/exemples/`). 15 à 25 s, 4 à 6 scènes, `seed` différent à chaque vidéo, `music` selon la rotation ci-dessus.
 6. **Contrôle.** `python3 tools/make_video.py <spec> --stills /tmp/stills_<sujet>` puis ouvrir chaque image avec Read : aucun texte coupé, superposé ou trop près des bords ; orthographe et accents corrects ; chiffres identiques aux sources. Corriger et recommencer si besoin.
 7. **Rendu.** `python3 tools/make_video.py <spec> videos/AAAA-MM-JJ_HHMM_sujet.mp4`.
 8. **Publication des fichiers.** `git pull --rebase`, `git add videos specs journal.md`, commit, `git push`. Vérifier `curl -sI https://raw.githubusercontent.com/fanoffootball-fof/media/main/videos/<fichier>` → HTTP 200.
@@ -87,7 +88,7 @@ Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, 
 
 ## Règles permanentes
 
-- **Jamais** d'images de match, d'extraits YouTube/TV, de photos de joueurs, de logos de clubs ni de musique protégée (le beat est généré par `tools/music.py`).
+- **Jamais** d'images de match, d'extraits YouTube/TV, de photos de joueurs, de logos de clubs ni de musique protégée (la musique est générée par `tools/music.py`).
 - Pas de rumeur sur la vie privée, pas de moquerie sur une blessure, pas de propos insultants. Une blessure ne se traite que si elle est officiellement communiquée.
 - Ne jamais supprimer ni modifier un post déjà programmé, ni un fichier existant de `videos/`.
 - `tools/` ne se modifie que pour corriger un bug bloquant (commit dédié qui explique le correctif).
