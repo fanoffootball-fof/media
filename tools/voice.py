@@ -23,6 +23,8 @@ LEAD = 0.15        # la voix démarre 0,15 s après le début de la scène…
 LEAD_FIRST = 0.55  # … et après la signature sonore pour la première scène
 TAIL = 0.35        # marge après la dernière syllabe
 DUCK = 0.3         # niveau de la musique sous la voix (environ -10 dB)
+VOICE_DB = 2.0     # niveau moyen de la voix : 2 dB au-dessus du niveau moyen de la musique seule
+CEIL = 0.89        # plafond des crêtes (limiteur)
 
 
 def scene_dur(sc):
@@ -122,9 +124,21 @@ def mix(music16, spec, clips):
         b = min(n, a + len(c))
         if b > a:
             v[a:b] += c[: b - a]
-    peak = np.max(np.abs(v)) + 1e-9
-    v *= 0.9 / peak
-    out = m * duck_envelope(v, n) + v
-    out /= np.max(np.abs(out)) + 1e-9
-    out *= 0.89
+    # Niveau de la voix réglé sur son niveau moyen (pas sur ses crêtes) : elle reste aussi forte que la musique seule,
+    # sans trou de volume quand elle parle.
+    speech = np.abs(v) > 0.01
+    v_rms = np.sqrt(np.mean(v[speech] ** 2)) + 1e-9 if speech.any() else 1.0
+    m_rms = np.sqrt(np.mean(m ** 2)) + 1e-9
+    v *= m_rms * 10 ** (VOICE_DB / 20) / v_rms
+    out = limit(m * duck_envelope(v, n) + v)
     return (np.stack([out, out], axis=1) * 32767).astype(np.int16)
+
+
+def limit(x, ceil=CEIL):
+    """Limiteur doux : rabote seulement les crêtes au-dessus du plafond (attaque 5 ms, maintien 20 ms)."""
+    from scipy.ndimage import maximum_filter1d, minimum_filter1d, uniform_filter1d
+    env = maximum_filter1d(np.abs(x), size=2 * int(0.005 * SR) + 1)
+    g = np.minimum(1.0, ceil / np.maximum(env, 1e-9))
+    g = minimum_filter1d(g, size=int(0.02 * SR))
+    g = uniform_filter1d(g, size=int(0.01 * SR))
+    return np.clip(x * g, -ceil, ceil)
