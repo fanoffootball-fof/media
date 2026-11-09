@@ -1,0 +1,17 @@
+{
+  "accent": "green",
+  "seed": 94,
+  "music": "stade",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "QUIZ FOOT", "lines": [{"t": "DEVINE", "color": "white"}, {"t": "LA LÉGENDE", "color": "gold"}],
+     "sub": ["en 3 indices", "Mets pause si tu as trouvé"]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 0, "clues": [["Né à Porto Alegre", "en 1980"], ["Arrivé au PSG en 2001", "en provenance du Grêmio"], ["Champion du monde 2002", "et Ballon d'Or 2005"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 1, "clues": [["Né à Porto Alegre", "en 1980"], ["Arrivé au PSG en 2001", "en provenance du Grêmio"], ["Champion du monde 2002", "et Ballon d'Or 2005"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 2, "clues": [["Né à Porto Alegre", "en 1980"], ["Arrivé au PSG en 2001", "en provenance du Grêmio"], ["Champion du monde 2002", "et Ballon d'Or 2005"]]},
+    {"type": "reveal", "dur": 3.0, "pre": "C'EST…", "lines": ["RONALDINHO"], "sub": "Brésil · 33 buts en 97 sélections", "pill": "Ligue des champions 2006 avec le Barça",
+     "source": "Wikipédia (FR et EN), consulté le 09/11/2026"},
+    {"type": "poll", "dur": 3.0, "lines": [{"t": "TU L'AS EU", "color": "white"}, {"t": "À QUEL INDICE ?", "color": "gold"}], "size": 120,
+     "options": [{"label": "1", "color": "white"}, {"label": "2", "color": "white"}, {"label": "3", "color": "white"}], "filled": false,
+     "cta": "Envoie-la à un fan du PSG"}
+  ]
+}
