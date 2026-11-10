@@ -1,0 +1,19 @@
+{
+  "accent": "red",
+  "seed": 58,
+  "music": "epique",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "BALLON D'OR VOLÉ ?", "lines": [{"t": "RIBÉRY", "color": "white"}, {"t": "2013", "color": "gold"}],
+     "size": 220, "sub": ["Le plus gros scandale ?"]},
+    {"type": "cards", "dur": 4.5, "title": "BALLON D'OR 2013", "subtitle": "part des votes", "numbered": true,
+     "items": [["CRISTIANO RONALDO", "27,99 %"], ["LIONEL MESSI", "24,72 %"], ["FRANCK RIBÉRY", "23,36 %"]],
+     "source": "Topendsports, consulté le 10/11/2026"},
+    {"type": "statement", "dur": 4.0, "lines": [{"t": "RIBÉRY GAGNE", "color": "white"}, {"t": "LE TRIPLÉ", "color": "gold"}, {"t": "AVEC LE BAYERN.", "color": "white"}],
+     "box": ["… et il finit seulement", "3e du vote"], "source": "Maxifoot, consulté le 10/11/2026"},
+    {"type": "statement", "dur": 4.0, "lines": [{"t": "LE VOTE", "color": "white"}, {"t": "PROLONGÉ", "color": "red"}, {"t": "DE 2 SEMAINES", "color": "white"}],
+     "box": ["Clôture repoussée", "du 15 au 29 novembre 2013"], "source": "Maxifoot, consulté le 10/11/2026"},
+    {"type": "poll", "dur": 3.0, "lines": [{"t": "RIBÉRY", "color": "white"}, {"t": "S'EST FAIT VOLER ?", "color": "gold"}], "size": 120,
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}],
+     "cta": "Envoie-la à ton pote qui dit le contraire"}
+  ]
+}
