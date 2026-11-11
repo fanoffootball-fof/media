@@ -1,0 +1,20 @@
+{
+  "accent": "purple",
+  "seed": 64,
+  "music": "stade",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "CE JOUR-LÀ N°1", "lines": [{"t": "MESSI", "color": "white"}, {"t": "BARÇA 3-4 BETIS", "color": "gold"}],
+     "size": 170, "sub": ["11 novembre 2018", "Il y a 8 ans"]},
+    {"type": "counters", "dur": 4.0, "top": "RETOUR DE BLESSURE", "items": [{"value": 2, "from": 0, "label": "BUTS DE MESSI", "size": 300, "color": "gold"}],
+     "chips": [{"label": "68e", "sub": "penalty", "color": "purple"}, {"label": "90+2", "sub": "trop tard", "color": "purple"}],
+     "source": "fcbarcelona.com, consulté le 11/11/2026"},
+    {"type": "cards", "dur": 4.5, "title": "LE SCORE FOU", "subtitle": "Liga · Camp Nou",
+     "items": [["BETIS : 4", "Firpo, Joaquín, Lo Celso, Canales"], ["BARÇA : 3", "Messi (x2), Vidal"]],
+     "source": "fcbarcelona.com, consulté le 11/11/2026"},
+    {"type": "statement", "dur": 4.0, "lines": [{"t": "FIN D'UNE SÉRIE", "color": "white"}, {"t": "DE 42 MATCHS", "color": "gold"}, {"t": "SANS DÉFAITE", "color": "white"}],
+     "box": ["en Liga", "au Camp Nou"], "source": "Catalan News, consulté le 11/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "LA PLUS GROSSE", "color": "white"}, {"t": "SURPRISE DU CAMP NOU ?", "color": "gold"}], "size": 105,
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}],
+     "cta": "Envoie-la à un fan du Barça"}
+  ]
+}
