@@ -1,0 +1,20 @@
+{
+  "accent": {"split": ["cyan", "blue"]},
+  "left_name": "ITALIE",
+  "right_name": "FRANCE",
+  "seed": 66,
+  "music": "epique",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "PRONOSTIC N°1", "lines": [{"t": "ITALIE", "color": "white"}, {"t": "FRANCE", "color": "gold"}],
+     "size": 200, "sub": ["Ce soir 20h45 · Milan", "Ligue des nations · 5e journée"]},
+    {"type": "duel", "dur": 4.5, "rows": [{"label": "POINTS", "l": 7, "r": 10}, {"label": "BUTS MARQUÉS", "l": 8, "r": 7}, {"label": "VICTOIRES", "l": 2, "r": 3}],
+     "source": "Classement Orange Sports, au 11/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "LES BLEUS", "color": "white"}, {"t": "1ERS ET INVAINCUS", "color": "gold"}],
+     "box": ["3 victoires, 1 nul", "l'Italie 2e à 3 points"], "source": "Classement Orange Sports, au 11/11/2026"},
+    {"type": "statement", "dur": 3.0, "lines": [{"t": "AU MATCH ALLER", "color": "white"}, {"t": "FRANCE 1-1 ITALIE", "color": "gold"}],
+     "box": ["le 2 octobre 2026"], "source": "Maxifoot, 02/10/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "QUI GAGNE", "color": "white"}, {"t": "CE SOIR ?", "color": "gold"}],
+     "options": [{"label": "ITALIE", "color": "cyan"}, {"label": "NUL", "color": "grey"}, {"label": "FRANCE", "color": "blue"}],
+     "cta": "Envoie-la à un fan des Bleus"}
+  ]
+}
