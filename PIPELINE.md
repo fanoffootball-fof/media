@@ -112,7 +112,7 @@ Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, 
 5. **Spec.** Écrire `specs/AAAA-MM-JJ_HHMM_sujet.json` (format : `tools/SPEC.md`, exemples : `specs/exemples/`). 15 à 25 s, 4 à 6 scènes, `seed` différent à chaque vidéo, `music` selon la rotation ci-dessus.
 6. **Contrôle.** `python3 tools/make_video.py <spec> --stills /tmp/stills_<sujet>` puis ouvrir chaque image avec Read : aucun texte coupé, superposé ou trop près des bords ; orthographe et accents corrects ; chiffres identiques aux sources. Corriger et recommencer si besoin.
 7. **Rendu.** `python3 tools/make_video.py <spec> videos/AAAA-MM-JJ_HHMM_sujet.mp4`.
-8. **Publication des fichiers.** `git pull --rebase`, `git add videos specs journal.md`, commit, `git push`. Vérifier `curl -sI https://raw.githubusercontent.com/fanoffootball-fof/media/main/videos/<fichier>` → HTTP 200.
+8. **Publication des fichiers.** `git checkout main` (la copie de la session peut être sur un commit détaché), puis `git pull --rebase origin main`, `git add videos specs journal.md`, commit, `git push`. Vérifier `curl -sI https://raw.githubusercontent.com/fanoffootball-fof/media/main/videos/<fichier>` → HTTP 200.
 9. **Programmation Metricool.** `createScheduledPost` avec `blogId` `7925135`, `date` `AAAA-MM-JJTHH:MM:00+01:00`, et dans `info` :
    ```json
    {"autoPublish": true, "descendants": [], "draft": false, "firstCommentText": "", "hasNotReadNotes": false,
