@@ -1,0 +1,20 @@
+{
+  "accent": {"split": ["blue", "red"]},
+  "left_name": "FRANCE",
+  "right_name": "TURQUIE",
+  "seed": 81,
+  "music": "stade",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "PRONOSTIC N°2", "lines": [{"t": "FRANCE", "color": "gold"}, {"t": "TURQUIE", "color": "white"}],
+     "size": 200, "sub": ["Ce soir 20h45 · Bordeaux", "Ligue des nations · 6e journée"]},
+    {"type": "duel", "dur": 4.5, "rows": [{"label": "POINTS", "l": 10, "r": 0}, {"label": "VICTOIRES", "l": 3, "r": 0}, {"label": "DÉFAITES", "l": 1, "r": 5}],
+     "source": "Classement RTBF, au 13/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "BATTUS 3-1", "color": "white"}, {"t": "EN ITALIE JEUDI", "color": "white"}, {"t": "LES BLEUS 2ES", "color": "gold"}],
+     "box": ["Italie et France à 10 points", "la Belgique 3e à 9"], "source": "RTBF (13/11) et Walfoot (15/11/2026)"},
+    {"type": "statement", "dur": 3.0, "lines": [{"t": "AU MATCH ALLER", "color": "white"}, {"t": "TURQUIE 0-1 FRANCE", "color": "gold"}],
+     "box": ["le 25 septembre 2026", "une victoire ce soir = qualif"], "source": "FFF.fr et RTBF, consultés le 15/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "QUI L'EMPORTE", "color": "white"}, {"t": "À BORDEAUX ?", "color": "gold"}],
+     "options": [{"label": "FRANCE", "color": "blue"}, {"label": "NUL", "color": "grey"}, {"label": "TURQUIE", "color": "red"}],
+     "cta": "Envoie-la à un fan des Bleus"}
+  ]
+}

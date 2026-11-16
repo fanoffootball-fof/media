@@ -1,0 +1,20 @@
+{
+  "accent": "purple",
+  "seed": 52,
+  "music": "stade",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "TOP 3", "lines": [{"t": "SHEARER", "color": "white"}, {"t": "KANE", "color": "gold"}, {"t": "ROONEY", "color": "white"}],
+     "size": 190, "sub": ["Les rois du but en Premier League"]},
+    {"type": "cards", "dur": 5.5, "title": "MEILLEURS BUTEURS", "subtitle": "de l'histoire de la Premier League", "numbered": true,
+     "items": [["ALAN SHEARER", "260 buts en 441 matchs"], ["HARRY KANE", "213 buts en 320 matchs"], ["WAYNE ROONEY", "208 buts en 491 matchs"]],
+     "source": "Football365, Liverpoolfc.com, NBC Sports (29/10/2026), consultés le 13/11"},
+    {"type": "counters", "dur": 3.5, "top": "LE RECORD DE SHEARER", "items": [{"value": 260, "from": 0, "label": "BUTS EN PREMIER LEAGUE", "size": 260, "color": "gold"}],
+     "chips": [{"label": "Blackburn", "sub": "112 buts", "color": "blue"}, {"label": "Newcastle", "sub": "148 buts", "color": "grey"}],
+     "source": "Football365, consulté le 13/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "KANE : 213 BUTS,", "color": "white"}, {"t": "TOUS AVEC", "color": "white"}, {"t": "TOTTENHAM", "color": "gold"}],
+     "box": ["Aucun but en 3 matchs avec Norwich"], "source": "Football365, consulté le 13/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "LE PLUS GRAND", "color": "white"}, {"t": "BUTEUR DE PL ?", "color": "gold"}], "size": 130,
+     "options": [{"label": "SHEARER", "color": "blue"}, {"label": "KANE", "color": "purple"}, {"label": "ROONEY", "color": "red"}],
+     "cta": "Envoie-la à un fan de Premier League"}
+  ]
+}

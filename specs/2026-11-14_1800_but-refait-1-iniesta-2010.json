@@ -1,0 +1,33 @@
+{
+  "accent": "red",
+  "seed": 64,
+  "music": "epique",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "BUT REFAIT N°1", "lines": [{"t": "ANDRÉS", "color": "white"}, {"t": "INIESTA", "color": "gold"}],
+     "sub": ["Finale de la Coupe du monde 2010", "Pays-Bas 0-1 Espagne"]},
+    {"type": "pitch", "dur": 4.5, "kicker": "BUT REFAIT N°1", "title": "INIESTA · 2010", "view_from": 50,
+     "players": [
+       {"team": "def", "path": [[40, 85, 0], [43, 87, 1.5], [45, 88, 2.6]]},
+       {"team": "def", "path": [[55, 84, 0], [57, 86, 1.5], [59, 87.5, 2.6]]},
+       {"team": "def", "path": [[58, 78, 0], [60, 81, 1.5], [61, 84, 2.6]]},
+       {"team": "def", "path": [[35, 80, 0], [38, 83, 1.5], [40, 85, 2.6]]},
+       {"team": "def", "path": [[47, 74, 0], [48, 76, 1.5]]},
+       {"team": "gk", "label": "Stekelenburg", "path": [[50, 98.6, 0], [52, 98.4, 2.4], [49, 99.2, 3.0]]},
+       {"team": "att", "path": [[38, 80, 0], [40, 85, 1.5], [41, 88, 2.6]]},
+       {"team": "att", "path": [[70, 75, 0], [71, 79, 1.5], [72, 82, 2.6]]},
+       {"team": "att", "label": "Fàbregas", "path": [[47.5, 71.5, 0], [49.5, 76.5, 1.2], [50, 78, 2.0]]},
+       {"team": "att", "label": "Iniesta", "star": true, "path": [[64, 80, 0], [62.5, 84.5, 1.4], [61.5, 87, 2.0], [62.3, 88.6, 2.45], [63, 89.6, 3.0]]}
+     ],
+     "ball": [[48.3, 72.6, 0], [50.3, 77.6, 1.2], [61.3, 87.6, 2.0], [62.2, 88.9, 2.45], [62.6, 89.4, 2.6], [45.8, 101.2, 3.0]],
+     "goal_t": 2.95,
+     "captions": [[0, "Fàbregas lance l'action"], [1.2, "Il sert Iniesta à droite de la surface"], [2.0, "Contrôle d'Iniesta"], [2.6, "Frappe croisée du droit !"]],
+     "source": "Reconstitution schématique · d'après Maxifoot et FIFA"},
+    {"type": "pitch", "dur": 5.0, "kicker": "AU RALENTI", "title": "INIESTA · 2010", "keep_header": true, "view_from": 50,
+     "speed": 0.6, "t0": 1.0, "replay": true,
+     "source": "Reconstitution schématique · d'après Maxifoot et FIFA"},
+    {"type": "statement", "dur": 3.0, "lines": [{"t": "11 JUILLET 2010", "color": "white"}, {"t": "JOHANNESBURG", "color": "gold"}],
+     "box": ["116e minute, en prolongation", "1er titre mondial de l'Espagne"], "source": "Maxifoot, UPI et FIFA, consultés le 14/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "LE BUT LE PLUS", "color": "white"}, {"t": "IMPORTANT DE L'ESPAGNE ?", "color": "gold"}], "size": 110,
+     "options": [{"label": "OUI", "color": "red"}, {"label": "NON", "color": "blue"}], "cta": "Envoie-la à un fan de l'Espagne"}
+  ]
+}

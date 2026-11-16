@@ -1,0 +1,20 @@
+{
+  "accent": "blue",
+  "seed": 17,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "STATS", "lines": [{"t": "RAPHINHA", "color": "gold"}, {"t": "INARRÊTABLE", "color": "white"}],
+     "size": 190, "sub": ["19 buts en 14 matchs", "Saison 2026-27"], "pill": "FC BARCELONE"},
+    {"type": "counters", "dur": 4.0, "top": "TOUTES COMPÉTITIONS 2026-27",
+     "items": [{"value": 19, "label": "BUTS", "size": 260, "color": "gold"}, {"value": 14, "label": "MATCHS", "size": 260, "color": "white"}],
+     "badge": "+ 3 passes décisives", "source": "Stats Foot Mercato, consultées le 16/11/2026"},
+    {"type": "counters", "dur": 4.0, "top": "EN LIGA",
+     "items": [{"value": 15, "label": "BUTS", "size": 260, "color": "gold"}, {"value": 11, "label": "MATCHS", "size": 260, "color": "white"}],
+     "badge": "Meilleur buteur après 12 journées", "source": "Foot Mercato (16/11) et Les Nouvelles du Foot (07/11/2026)"},
+    {"type": "counters", "dur": 3.5, "top": "EN LIGUE DES CHAMPIONS",
+     "items": [{"value": 4, "label": "BUTS", "size": 260, "color": "gold"}, {"value": 3, "label": "MATCHS", "size": 260, "color": "white"}],
+     "source": "Stats Foot Mercato, consultées le 16/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "RAPHINHA", "color": "gold"}, {"t": "40 BUTS CETTE SAISON ?", "color": "white"}], "size": 115,
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}], "cta": "Dis-le en commentaire"}
+  ]
+}

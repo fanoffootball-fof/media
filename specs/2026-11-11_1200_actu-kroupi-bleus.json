@@ -1,0 +1,20 @@
+{
+  "accent": "blue",
+  "seed": 61,
+  "music": "electro",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "1RE FOIS CHEZ LES BLEUS", "lines": [{"t": "KROUPI", "color": "white"}, {"t": "CONVOQUÉ !", "color": "gold"}],
+     "size": 200, "sub": ["20 ans · Bournemouth"]},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "IL REMPLACE", "color": "white"}, {"t": "MARCUS THURAM", "color": "gold"}, {"t": "FORFAIT", "color": "red"}],
+     "box": ["Blessé aux ischio-jambiers", "rendu à l'Inter"], "source": "AFP via Boursorama, 10/11/2026"},
+    {"type": "counters", "dur": 4.0, "top": "LIGUE 2 · 2024-25", "items": [{"value": 22, "from": 0, "label": "BUTS À 18 ANS", "size": 300, "color": "gold"}],
+     "badge": "MEILLEUR BUTEUR", "source": "AFP via Boursorama, 10/11/2026"},
+    {"type": "counters", "dur": 4.0, "top": "1RE SAISON EN PREMIER LEAGUE", "items": [{"value": 13, "from": 0, "label": "BUTS", "size": 300, "color": "gold"}],
+     "source": "AFP via Boursorama et beIN Sports, 10/11/2026"},
+    {"type": "statement", "dur": 3.0, "lines": [{"t": "ITALIE – FRANCE", "color": "white"}, {"t": "JEUDI 20H45", "color": "gold"}],
+     "box": ["Ligue des nations", "à Milan"], "source": "Foot Mercato, 08/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "KROUPI TITULAIRE", "color": "white"}, {"t": "CONTRE L'ITALIE ?", "color": "gold"}], "size": 115,
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}],
+     "cta": "Ton pronostic en commentaire"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "accent": {"split": ["blue", "pink"]},
+  "left_name": "Mbappé", "right_name": "Yamal",
+  "seed": 11,
+  "scenes": [
+    {"type": "title", "dur": 3.0, "lines": [{"t": "MBAPPÉ", "color": "blue"}, {"t": "VS", "color": "white"}, {"t": "YAMAL", "color": "pink"}],
+     "size": 190, "sub": ["Qui a le meilleur début de saison ?"]},
+    {"type": "counters", "dur": 3.0, "top": "Même nombre de matchs", "items": [{"value": 15, "label": "MATCHS CHACUN", "size": 300}],
+     "chips": [{"label": "Mbappé", "sub": "27 ans", "color": "blue"}, {"label": "Yamal", "sub": "19 ans", "color": "pink"}]},
+    {"type": "duel", "dur": 6.0, "rows": [{"label": "BUTS", "l": 16, "r": 13}, {"label": "PASSES DÉCISIVES", "l": 3, "r": 11},
+     {"label": "BUTS + PASSES", "l": 19, "r": 24}], "source": "Stats Foot Mercato, au 06/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "MBAPPÉ MARQUE PLUS.", "color": "blue"}, {"t": "YAMAL FAIT PLUS", "color": "pink"}, {"t": "MARQUER.", "color": "pink"}],
+     "box": ["Et Mbappé vient de passer", "les 100 buts avec le Real"]},
+    {"type": "poll", "dur": 3.0, "lines": ["TON CHOIX ?"], "size": 140,
+     "options": [{"label": "MBAPPÉ", "color": "blue"}, {"label": "YAMAL", "color": "pink"}]}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "accent": {"split": ["red", "cyan"]},
+  "left_name": "Forest", "right_name": "Man City",
+  "seed": 58,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "BILAN DU WEEK-END", "lines": [{"t": "LIAM DELAP", "color": "gold"}, {"t": "PUNIT CITY", "color": "white"}],
+     "size": 190, "sub": ["Nottingham Forest 3-1 Man City"]},
+    {"type": "counters", "dur": 4.0, "top": "CONTRE SON ANCIEN CLUB",
+     "items": [{"value": 2, "label": "BUTS DE DELAP", "size": 300, "color": "gold"}],
+     "chips": [{"label": "Forest", "sub": "3 buts", "color": "red"}, {"label": "Man City", "sub": "1 but", "color": "cyan"}],
+     "badge": "Il a débuté sa carrière à City", "source": "ESPN, 07/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "MAN CITY :", "color": "cyan"}, {"t": "3 DÉFAITES DE SUITE", "color": "white"}, {"t": "EN PREMIER LEAGUE", "color": "white"}],
+     "box": ["Une première", "depuis deux ans"], "source": "ESPN, 07/11/2026"},
+    {"type": "cards", "dur": 4.5, "title": "LES AUTRES SCORES", "subtitle": "samedi 7 novembre",
+     "items": [["VALENCE 0-3 REAL MADRID", "Valverde, Güler, Mbappé"], ["PSG 1-0 TROYES", "But de Zabarnyi"], ["LEIPZIG 5-2 AUGSBOURG", "Cinq buteurs différents à Leipzig"]],
+     "source": "Foot Mercato, consulté le 08/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "LA PERF", "color": "white"}, {"t": "DU SAMEDI ?", "color": "gold"}], "size": 130,
+     "options": [{"label": "DELAP", "color": "red"}, {"label": "MBAPPÉ", "color": "blue"}, {"label": "NMECHA", "color": "orange"}],
+     "cta": "Vote en commentaire"}
+  ]
+}

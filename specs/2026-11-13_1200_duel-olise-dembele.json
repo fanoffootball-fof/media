@@ -1,0 +1,19 @@
+{
+  "accent": {"split": ["red", "blue"]},
+  "left_name": "Olise", "right_name": "Dembélé",
+  "seed": 47,
+  "music": "electro",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "lines": [{"t": "OLISE", "color": "red"}, {"t": "VS", "color": "white"}, {"t": "DEMBÉLÉ", "color": "blue"}],
+     "size": 190, "sub": ["Qui est le plus fort cette saison ?"]},
+    {"type": "duel", "dur": 5.0, "rows": [{"label": "MATCHS", "l": 14, "r": 9}, {"label": "BUTS", "l": 11, "r": 4}, {"label": "PASSES DÉCISIVES", "l": 5, "r": 5}],
+     "source": "Foot Mercato, saison 2026-27 en club, consulté le 13/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "OLISE :", "color": "red"}, {"t": "16 BUTS + PASSES D.", "color": "white"}, {"t": "EN 14 MATCHS", "color": "gold"}],
+     "box": ["Dembélé : 9 en 9 matchs"], "source": "Foot Mercato, saison 2026-27 en club, consulté le 13/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "HIER À MILAN,", "color": "white"}, {"t": "OLISE A MARQUÉ", "color": "gold"}],
+     "box": ["but à la 10e minute", "défaite 3-1 contre l'Italie"], "source": "FFF.fr, Italie-France du 12/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "TU PRENDS QUI", "color": "white"}, {"t": "CETTE SAISON ?", "color": "gold"}], "size": 130,
+     "options": [{"label": "OLISE", "color": "red"}, {"label": "DEMBÉLÉ", "color": "blue"}],
+     "cta": "Dis-nous pourquoi en commentaire"}
+  ]
+}

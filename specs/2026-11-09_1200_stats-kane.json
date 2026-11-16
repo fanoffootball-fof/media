@@ -1,0 +1,19 @@
+{
+  "accent": "red",
+  "seed": 86,
+  "music": "electro",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "STATS", "lines": [{"t": "HARRY", "color": "white"}, {"t": "KANE", "color": "gold"}],
+     "sub": ["21 buts + passes D", "en 14 matchs cette saison"], "pill": "BAYERN MUNICH"},
+    {"type": "counters", "dur": 4.0, "top": "SAISON 2026-27 · TOUTES COMPÉTITIONS",
+     "items": [{"value": 10, "label": "BUTS", "size": 260, "color": "gold"}, {"value": 11, "label": "PASSES D", "size": 260, "color": "white"}],
+     "badge": "14 matchs joués", "source": "Stats Foot Mercato, au 09/11/2026"},
+    {"type": "cards", "dur": 4.5, "title": "PAR COMPÉTITION", "subtitle": "saison 2026-27",
+     "items": [["BUNDESLIGA", "4 buts · 8 passes D en 9 matchs"], ["LIGUE DES CHAMPIONS", "4 buts · 3 passes D en 4 matchs"], ["COUPE D'ALLEMAGNE", "2 buts en 1 match"]],
+     "source": "Stats Foot Mercato, au 09/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "LE BUTEUR", "color": "white"}, {"t": "EST DEVENU", "color": "white"}, {"t": "PASSEUR", "color": "gold"}],
+     "box": ["Plus de passes D", "que de buts"], "source": "Stats Foot Mercato, au 09/11/2026"},
+    {"type": "poll", "dur": 4.0, "lines": [{"t": "LE MEILLEUR 9", "color": "white"}, {"t": "DU MONDE ?", "color": "gold"}], "size": 130,
+     "options": [{"label": "KANE", "color": "red"}, {"label": "HAALAND", "color": "cyan"}], "cta": "Réponds en commentaire"}
+  ]
+}

@@ -1,0 +1,384 @@
+{
+ "accent": "blue",
+ "seed": 52,
+ "music": "epique",
+ "scenes": [
+  {
+   "type": "title",
+   "dur": 2.0,
+   "kicker": "LE BUT EN 3D",
+   "lines": [
+    {
+     "t": "LA VOLÉE",
+     "color": "white"
+    },
+    {
+     "t": "DE ZIDANE",
+     "color": "gold"
+    }
+   ],
+   "sub": [
+    "Finale de Ligue des champions 2002",
+    "Real Madrid 2-1 Leverkusen"
+   ]
+  },
+  {
+   "type": "pitch3d",
+   "dur": 5.0,
+   "kicker": "LE BUT EN 3D",
+   "title": "ZIDANE · 2002",
+   "players": [
+    {
+     "team": "def",
+     "path": [
+      [
+       16,
+       72,
+       0
+      ],
+      [
+       13,
+       80,
+       1.6
+      ],
+      [
+       11,
+       83,
+       2.2
+      ]
+     ]
+    },
+    {
+     "team": "def",
+     "path": [
+      [
+       38,
+       88,
+       0
+      ],
+      [
+       39,
+       90,
+       2.0
+      ],
+      [
+       41,
+       91,
+       3.4
+      ]
+     ]
+    },
+    {
+     "team": "def",
+     "path": [
+      [
+       55,
+       88,
+       0
+      ],
+      [
+       53,
+       90,
+       2.0
+      ],
+      [
+       51,
+       91,
+       3.4
+      ]
+     ]
+    },
+    {
+     "team": "def",
+     "path": [
+      [
+       72,
+       85,
+       0
+      ],
+      [
+       66,
+       88,
+       2.5
+      ]
+     ]
+    },
+    {
+     "team": "def",
+     "path": [
+      [
+       31,
+       77,
+       0
+      ],
+      [
+       35,
+       80,
+       2.2
+      ],
+      [
+       37,
+       82,
+       3.4
+      ]
+     ]
+    },
+    {
+     "team": "def",
+     "path": [
+      [
+       57,
+       75,
+       0
+      ],
+      [
+       51,
+       79,
+       2.5
+      ]
+     ]
+    },
+    {
+     "team": "gk",
+     "path": [
+      [
+       50.5,
+       98.6,
+       0
+      ],
+      [
+       50,
+       98.8,
+       3.0
+      ],
+      [
+       49.6,
+       99.2,
+       3.6
+      ]
+     ]
+    },
+    {
+     "team": "att",
+     "path": [
+      [
+       63,
+       83,
+       0
+      ],
+      [
+       57,
+       89,
+       2.6
+      ],
+      [
+       55,
+       91,
+       3.4
+      ]
+     ]
+    },
+    {
+     "team": "att",
+     "path": [
+      [
+       78,
+       76,
+       0
+      ],
+      [
+       72,
+       83,
+       2.6
+      ]
+     ]
+    },
+    {
+     "team": "att",
+     "label": "Solari",
+     "path": [
+      [
+       33,
+       63.5,
+       0
+      ],
+      [
+       34,
+       66,
+       0.7
+      ],
+      [
+       33,
+       69,
+       1.6
+      ]
+     ]
+    },
+    {
+     "team": "att",
+     "label": "Roberto Carlos",
+     "path": [
+      [
+       9,
+       68,
+       0
+      ],
+      [
+       8.5,
+       79,
+       1.5
+      ],
+      [
+       6.5,
+       83,
+       1.95
+      ],
+      [
+       7,
+       84.5,
+       2.4
+      ]
+     ]
+    },
+    {
+     "team": "att",
+     "label": "Zidane",
+     "star": true,
+     "path": [
+      [
+       46,
+       73,
+       0
+      ],
+      [
+       43,
+       79,
+       1.8
+      ],
+      [
+       41,
+       83,
+       3.1
+      ],
+      [
+       41.5,
+       84,
+       3.6
+      ]
+     ]
+    }
+   ],
+   "ball": [
+    [
+     34.5,
+     64.8,
+     0
+    ],
+    [
+     35,
+     67,
+     0.7
+    ],
+    [
+     8.4,
+     80.2,
+     1.5
+    ],
+    [
+     6.9,
+     83.6,
+     1.95
+    ],
+    [
+     41,
+     83.8,
+     3.2,
+     "air z=0.7"
+    ],
+    [
+     45.4,
+     101.2,
+     3.55,
+     "high"
+    ]
+   ],
+   "goal_t": 3.5,
+   "captions": [
+    [
+     0,
+     "Solari lance Roberto Carlos"
+    ],
+    [
+     1.6,
+     "Le centre retombe au bord de la surface"
+    ],
+    [
+     3.15,
+     "Volée du gauche de Zidane !"
+    ]
+   ],
+   "source": "Reconstitution schématique · d'après UEFA.com",
+   "camera": {
+    "mode": "follow"
+   }
+  },
+  {
+   "type": "pitch3d",
+   "dur": 4.5,
+   "kicker": "AU RALENTI · DERRIÈRE LE BUT",
+   "title": "ZIDANE · 2002",
+   "keep_header": true,
+   "speed": 0.6,
+   "t0": 1.8,
+   "replay": true,
+   "source": "Reconstitution schématique · d'après UEFA.com",
+   "camera": {
+    "mode": "goal"
+   }
+  },
+  {
+   "type": "statement",
+   "dur": 3.0,
+   "lines": [
+    {
+     "t": "15 MAI 2002",
+     "color": "white"
+    },
+    {
+     "t": "GLASGOW",
+     "color": "gold"
+    }
+   ],
+   "box": [
+    "Le but qui offre au Real",
+    "sa 9e Coupe d'Europe"
+   ],
+   "source": "UEFA.com et realmadrid.com, consultés le 07/11/2026"
+  },
+  {
+   "type": "poll",
+   "dur": 3.0,
+   "lines": [
+    {
+     "t": "LE PLUS BEAU",
+     "color": "white"
+    },
+    {
+     "t": "BUT EN FINALE ?",
+     "color": "gold"
+    }
+   ],
+   "options": [
+    {
+     "label": "ZIDANE 2002",
+     "color": "blue"
+    },
+    {
+     "label": "BALE 2018",
+     "color": "purple"
+    }
+   ],
+   "cta": "Ton choix en commentaire"
+  }
+ ]
+}

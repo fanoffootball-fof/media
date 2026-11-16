@@ -1,0 +1,19 @@
+{
+  "accent": {"split": ["cyan", "orange"]},
+  "left_name": "Henry", "right_name": "Benzema",
+  "seed": 37,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "lines": [{"t": "HENRY", "color": "cyan"}, {"t": "VS", "color": "white"}, {"t": "BENZEMA", "color": "orange"}],
+     "size": 190, "sub": ["Qui a la plus grande carrière ?"]},
+    {"type": "duel", "dur": 5.0, "rows": [{"label": "SÉLECTIONS EN BLEU", "l": 123, "r": 97}, {"label": "BUTS EN BLEU", "l": 51, "r": 37}],
+     "source": "FFF.fr, fiches joueurs consultées le 10/11/2026"},
+    {"type": "duel", "dur": 5.0, "rows": [{"label": "LIGUES DES CHAMPIONS", "l": 1, "r": 5}, {"label": "BALLON D'OR", "l": 0, "r": 1},
+     {"label": "COUPE DU MONDE + EURO", "l": 2, "r": 0}], "source": "FFF.fr, fiches joueurs consultées le 10/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "HENRY : CHAMPION", "color": "cyan"}, {"t": "DU MONDE ET D'EUROPE.", "color": "cyan"}, {"t": "BENZEMA : BALLON D'OR.", "color": "orange"}],
+     "box": ["Henry : Mondial 1998, Euro 2000", "Benzema : Ballon d'Or 2022"]},
+    {"type": "poll", "dur": 3.0, "lines": [{"t": "LE PLUS GRAND", "color": "white"}, {"t": "DES DEUX ?", "color": "gold"}], "size": 130,
+     "options": [{"label": "HENRY", "color": "cyan"}, {"label": "BENZEMA", "color": "orange"}],
+     "cta": "Défends ton choix en commentaire"}
+  ]
+}

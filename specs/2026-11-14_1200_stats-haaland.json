@@ -1,0 +1,19 @@
+{
+  "accent": "cyan",
+  "seed": 37,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "STATS", "lines": [{"t": "ERLING", "color": "white"}, {"t": "HAALAND", "color": "gold"}],
+     "sub": ["9 buts en 10 matchs", "de Premier League"], "pill": "MANCHESTER CITY"},
+    {"type": "counters", "dur": 4.0, "top": "PREMIER LEAGUE 2026-27",
+     "items": [{"value": 9, "label": "BUTS", "size": 260, "color": "gold"}, {"value": 10, "label": "MATCHS", "size": 260, "color": "white"}],
+     "badge": "890 minutes jouées", "source": "Stats FotMob et Foot Mercato, au 14/11/2026"},
+    {"type": "counters", "dur": 4.0, "top": "SES TIRS EN PREMIER LEAGUE",
+     "items": [{"value": 38, "label": "TIRS", "size": 260, "color": "white"}, {"value": 18, "label": "CADRÉS", "size": 260, "color": "gold"}],
+     "badge": "9 buts pour 7,06 xG", "source": "Stats FotMob, au 14/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "9 BUTS", "color": "gold"}, {"t": "0 PASSE D", "color": "white"}],
+     "box": ["En Premier League", "cette saison"], "source": "Stats FotMob et Foot Mercato, au 14/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "30 BUTS EN PL", "color": "white"}, {"t": "CETTE SAISON ?", "color": "gold"}], "size": 130,
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}], "cta": "Ton pronostic en commentaire"}
+  ]
+}

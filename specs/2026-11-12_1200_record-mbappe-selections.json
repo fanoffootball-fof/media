@@ -1,0 +1,21 @@
+{
+  "accent": "orange",
+  "seed": 65,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "OBJECTIF RECORD", "lines": [{"t": "MBAPPÉ", "color": "white"}, {"t": "107 SÉLECTIONS", "color": "gold"}],
+     "size": 180, "sub": ["Le record des Bleus : 145"]},
+    {"type": "progress", "dur": 4.5, "top": "SÉLECTIONS EN ÉQUIPE DE FRANCE", "value": 107, "from": 0, "label": "SÉLECTIONS",
+     "target": 145, "big": "ENCORE 38", "sub": "pour dépasser Hugo Lloris", "source": "FFF.fr, fiche joueur consultée le 12/11/2026"},
+    {"type": "cards", "dur": 4.0, "title": "LES RECORDMEN", "subtitle": "Sélections en équipe de France",
+     "items": [["HUGO LLORIS", "145 sélections"], ["LILIAN THURAM", "142 sélections"], ["KYLIAN MBAPPÉ", "107 et ça continue"]],
+     "source": "FFF.fr (22/06/2026 et fiche joueur), consultés le 12/11/2026"},
+    {"type": "counters", "dur": 4.0, "top": "DÉJÀ RECORDMAN", "items": [{"value": 67, "from": 0, "label": "BUTS EN BLEU", "size": 240, "color": "gold"}, {"value": 22, "from": 0, "label": "BUTS EN COUPE DU MONDE", "size": 240, "color": "white"}],
+     "badge": "MEILLEUR BUTEUR DE L'HISTOIRE DES MONDIAUX", "source": "FFF.fr, fiche joueur consultée le 12/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "100 SÉLECTIONS", "color": "white"}, {"t": "À 27 ANS", "color": "gold"}],
+     "box": ["27 ans et 184 jours", "plus précoce que Vieira et Griezmann"], "source": "Sud Radio, 23/06/2026, consulté le 12/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "IL BATTRA", "color": "white"}, {"t": "LE RECORD DE LLORIS ?", "color": "gold"}], "size": 115,
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}],
+     "cta": "Réponds OUI ou NON en commentaire"}
+  ]
+}

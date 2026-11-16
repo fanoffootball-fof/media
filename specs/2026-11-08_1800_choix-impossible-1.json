@@ -1,0 +1,128 @@
+{
+ "accent": "purple",
+ "seed": 73,
+ "music": "epique",
+ "scenes": [
+  {
+   "type": "title",
+   "dur": 2.0,
+   "kicker": "CHOIX IMPOSSIBLE N°1",
+   "lines": [
+    {
+     "t": "ZIDANE",
+     "color": "gold"
+    },
+    {
+     "t": "OU MODRIĆ ?",
+     "color": "white"
+    }
+   ],
+   "size": 190,
+   "sub": [
+    "Tu n'en gardes qu'un",
+    "3 manches"
+   ]
+  },
+  {
+   "type": "poll",
+   "dur": 3.0,
+   "lines": [
+    {
+     "t": "MANCHE 1",
+     "color": "gold"
+    },
+    {
+     "t": "LE MILIEU",
+     "color": "white"
+    }
+   ],
+   "size": 120,
+   "options": [
+    {
+     "label": "ZIDANE",
+     "color": "blue"
+    },
+    {
+     "label": "MODRIĆ",
+     "color": "red"
+    }
+   ],
+   "cta": "Lequel tu gardes ?"
+  },
+  {
+   "type": "poll",
+   "dur": 3.0,
+   "lines": [
+    {
+     "t": "MANCHE 2",
+     "color": "gold"
+    },
+    {
+     "t": "LE GARDIEN",
+     "color": "white"
+    }
+   ],
+   "size": 120,
+   "options": [
+    {
+     "label": "BUFFON",
+     "color": "cyan"
+    },
+    {
+     "label": "NEUER",
+     "color": "green"
+    }
+   ],
+   "cta": "Lequel tu gardes ?"
+  },
+  {
+   "type": "poll",
+   "dur": 3.0,
+   "lines": [
+    {
+     "t": "MANCHE 3",
+     "color": "gold"
+    },
+    {
+     "t": "L'AVANT-CENTRE",
+     "color": "white"
+    }
+   ],
+   "size": 120,
+   "options": [
+    {
+     "label": "BENZEMA",
+     "color": "blue"
+    },
+    {
+     "label": "LEWANDOWSKI",
+     "color": "red"
+    }
+   ],
+   "cta": "Lequel tu gardes ?"
+  },
+  {
+   "type": "statement",
+   "dur": 4.5,
+   "lines": [
+    {
+     "t": "ZIDANE OU MODRIĆ ?",
+     "color": "white"
+    },
+    {
+     "t": "BUFFON OU NEUER ?",
+     "color": "white"
+    },
+    {
+     "t": "BENZEMA OU LEWY ?",
+     "color": "gold"
+    }
+   ],
+   "box": [
+    "Envoie-la à ton pote",
+    "qui garde les autres"
+   ],
+   "size": 80
+  }
+ ]
+}
