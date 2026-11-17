@@ -1,0 +1,20 @@
+{
+  "accent": {"split": ["red", "green"]},
+  "left_name": "GALLES",
+  "right_name": "PORTUGAL",
+  "seed": 89,
+  "music": "stade",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "PRONOSTIC N°3", "lines": [{"t": "GALLES", "color": "white"}, {"t": "PORTUGAL", "color": "gold"}],
+     "size": 190, "sub": ["Ce soir 20h45 · Cardiff", "Ligue des nations · 6e journée"]},
+    {"type": "duel", "dur": 4.5, "rows": [{"label": "POINTS", "l": 3, "r": 12}, {"label": "VICTOIRES", "l": 1, "r": 4}, {"label": "BUTS MARQUÉS", "l": 3, "r": 10}],
+     "source": "Classement Orange Sports, au 16/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "LE PORTUGAL", "color": "white"}, {"t": "DÉJÀ QUALIFIÉ", "color": "gold"}, {"t": "POUR LES QUARTS", "color": "white"}],
+     "box": ["mais battu 4-1 samedi", "par le Danemark"], "source": "UEFA.com, consulté le 17/11/2026"},
+    {"type": "statement", "dur": 3.0, "lines": [{"t": "AU MATCH ALLER", "color": "white"}, {"t": "PORTUGAL 1-0 GALLES", "color": "gold"}],
+     "box": ["le 24 septembre 2026", "Galles déjà assuré d'être 4e"], "source": "Orange Sports et UEFA.com, consultés le 17/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "QUI GAGNE", "color": "white"}, {"t": "À CARDIFF ?", "color": "gold"}],
+     "options": [{"label": "GAL", "color": "red"}, {"label": "NUL", "color": "grey"}, {"label": "POR", "color": "green"}],
+     "cta": "Envoie-la à un fan du Portugal"}
+  ]
+}

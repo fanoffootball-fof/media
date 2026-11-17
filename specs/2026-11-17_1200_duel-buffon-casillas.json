@@ -1,0 +1,19 @@
+{
+  "accent": {"split": ["blue", "red"]},
+  "left_name": "Buffon", "right_name": "Casillas",
+  "seed": 23,
+  "music": "electro",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "lines": [{"t": "BUFFON", "color": "blue"}, {"t": "VS", "color": "white"}, {"t": "CASILLAS", "color": "red"}],
+     "size": 190, "sub": ["Le plus grand gardien ?"]},
+    {"type": "duel", "dur": 4.5, "rows": [{"label": "SÉLECTIONS", "l": 176, "r": 167}, {"label": "COUPES DU MONDE", "l": 1, "r": 1}],
+     "source": "UEFA.com, au 16/11/2026"},
+    {"type": "duel", "dur": 5.0, "rows": [{"label": "EUROS GAGNÉS", "l": 0, "r": 2}, {"label": "LIGUES DES CHAMPIONS", "l": 0, "r": 3},
+     {"label": "MATCHS DE LDC", "l": 124, "r": 177}], "source": "UEFA.com (09/11/2026) et 90min, consultés le 17/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "BUFFON :", "color": "blue"}, {"t": "3 FINALES DE LDC", "color": "white"}, {"t": "3 DÉFAITES", "color": "red"}],
+     "box": ["2003, 2015 et 2017", "Casillas en gagne 3"], "source": "90min et UEFA.com, consultés le 17/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "TU PRENDS QUI", "color": "white"}, {"t": "DANS TES CAGES ?", "color": "gold"}], "size": 120,
+     "options": [{"label": "BUFFON", "color": "blue"}, {"label": "CASILLAS", "color": "red"}],
+     "cta": "Ton gardien en commentaire"}
+  ]
+}
