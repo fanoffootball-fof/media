@@ -1,0 +1,33 @@
+{
+  "accent": "blue",
+  "seed": 97,
+  "music": "epique",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "LE 11 À COMPLÉTER N°1", "lines": [{"t": "LE 11", "color": "white"}, {"t": "DES BLEUS", "color": "gold"}],
+     "sub": ["Il manque un joueur"]},
+    {"type": "pitch", "dur": 6.0, "kicker": "LE 11 À COMPLÉTER", "title": "QUI TU METS ?", "view_from": 0,
+     "players": [
+       {"team": "gk", "label": "Lloris", "path": [[50, 12, 0]]},
+       {"team": "att", "label": "Desailly", "path": [[32, 26, 0]]},
+       {"team": "att", "label": "Blanc", "path": [[68, 26, 0]]},
+       {"team": "att", "label": "Lizarazu", "path": [[10, 42, 0]]},
+       {"team": "att", "label": "Thuram", "path": [[90, 42, 0]]},
+       {"team": "att", "label": "Deschamps", "path": [[50, 52, 0]]},
+       {"team": "att", "label": "Platini", "path": [[26, 60, 0]]},
+       {"team": "att", "label": "Zidane", "path": [[74, 60, 0]]},
+       {"team": "att", "label": "Ribéry", "path": [[18, 76, 0]]},
+       {"team": "att", "label": "Mbappé", "path": [[82, 76, 0]]},
+       {"team": "att", "label": "?", "star": true, "path": [[50, 86, 0]]}
+     ],
+     "captions": [[0, "Il manque : l'avant-centre"]],
+     "source": "Onze choisi par Fan of Football · joueurs passés par les Bleus, d'après FFF.fr"},
+    {"type": "cards", "dur": 4.0, "title": "LES 3 CANDIDATS",
+     "items": [["HENRY · 123 SÉL.", "51 buts · CDM 1998, Euro 2000"],
+               ["GIROUD · 137 SÉL.", "57 buts · CDM 2018"],
+               ["BENZEMA · 97 SÉL.", "37 buts · Ligue des nations 2021"]],
+     "source": "Fiches joueurs FFF.fr, consultées le 18/11/2026"},
+    {"type": "poll", "dur": 4.0, "lines": [{"t": "TON 9", "color": "white"}, {"t": "CHEZ LES BLEUS ?", "color": "gold"}],
+     "options": [{"label": "HENRY", "color": "blue"}, {"label": "GIROUD", "color": "gold"}, {"label": "BENZEMA", "color": "red"}],
+     "cta": "Envoie-la à un fan des Bleus"}
+  ]
+}

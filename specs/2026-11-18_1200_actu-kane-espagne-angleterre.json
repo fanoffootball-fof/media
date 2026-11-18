@@ -1,0 +1,26 @@
+{
+  "accent": {"split": ["red", "white"]},
+  "left_name": "ESPAGNE",
+  "right_name": "ANGLETERRE",
+  "seed": 93,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "ACTU DE LA SEMAINE", "lines": [{"t": "KANE", "color": "gold"}, {"t": "FAIT TOMBER", "color": "white"}, {"t": "L'ESPAGNE", "color": "white"}],
+     "size": 180, "sub": ["Espagne 2-3 Angleterre", "Ligue des nations · Madrid, 15/11"]},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "ESPAGNE 2-3", "color": "white"}, {"t": "ANGLETERRE", "color": "gold"}],
+     "box": ["Kane (pen.) 45e · Konsa 53e · White 57e", "Oyarzabal (pen.) 65e · N. Williams 75e"],
+     "source": "Feuille de match englandfootball.com, consultée le 18/11/2026"},
+    {"type": "counters", "dur": 3.5, "top": "LES CHAMPIONS DU MONDE TOMBENT",
+     "items": [{"value": 43, "from": 0, "label": "MATCHS SANS DÉFAITE", "size": 260, "color": "gold"}],
+     "chips": [{"label": "Fin de la série", "sub": "1re défaite depuis mars 2024", "color": "red"}],
+     "source": "Opta via Sports Mole, consulté le 18/11/2026"},
+    {"type": "counters", "dur": 4.0, "top": "RECORDS À L'EXTÉRIEUR",
+     "items": [{"value": 10, "from": 0, "label": "VICTOIRES DE SUITE", "size": 220, "color": "gold"},
+               {"value": 7, "from": 0, "label": "MATCHS DE SUITE OÙ KANE MARQUE", "size": 220, "color": "white"}],
+     "chips": [{"label": "Kane", "sub": "égale Tom Finney (1946-1948)", "color": "blue"}],
+     "source": "Opta via Sports Mole, consulté le 18/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "QUI EST", "color": "white"}, {"t": "LE PLUS FORT ?", "color": "gold"}],
+     "options": [{"label": "ESPAGNE", "color": "red"}, {"label": "ANGLETERRE", "color": "blue"}],
+     "cta": "Réponds en un mot en commentaire"}
+  ]
+}
