@@ -1,0 +1,23 @@
+{
+  "accent": "cyan",
+  "seed": 71,
+  "music": "electro",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "OBJECTIF RECORD", "lines": [{"t": "YAMAL", "color": "white"}, {"t": "À 1 BUT DE MBAPPÉ", "color": "gold"}],
+     "size": 170, "sub": ["Le record des moins de 20 ans"]},
+    {"type": "progress", "dur": 4.5, "top": "BUTS EN CHAMPIONNAT AVANT 20 ANS", "value": 40, "from": 0, "label": "BUTS",
+     "target": 41, "big": "ENCORE 1", "sub": "pour égaler Mbappé (41 buts)",
+     "source": "FootIledeFrance (01/11/2026), 5 grands championnats, 30 dernières saisons ; infosfoot (09/11/2026) ; consultés le 19/11/2026"},
+    {"type": "counters", "dur": 4.0, "top": "DÉJÀ BATTU EN LIGUE DES CHAMPIONS",
+     "items": [{"value": 14, "from": 0, "label": "YAMAL", "size": 240, "color": "gold"}, {"value": 13, "from": 0, "label": "MBAPPÉ", "size": 240, "color": "white"}],
+     "badge": "BUTS EN LDC AVANT 20 ANS", "source": "UEFA.com (04/11/2026), La Nouvelle Tribune (03/11/2026), consultés le 19/11/2026"},
+    {"type": "cards", "dur": 4.0, "title": "SES RECORDS", "subtitle": "Le plus jeune de l'histoire",
+     "items": [["BUTEUR EN LIGA", "le 8 octobre 2023"], ["BUTEUR D'UN EURO", "à 16 ans et 362 jours"], ["TITULAIRE EN LDC", "à 16 ans et 83 jours"]],
+     "source": "UEFA.com, 04/11/2026, consulté le 19/11/2026"},
+    {"type": "statement", "dur": 3.0, "lines": [{"t": "IL A JUSQU'AU", "color": "white"}, {"t": "13 JUILLET 2027", "color": "gold"}],
+     "box": ["le jour de ses 20 ans", "pour battre le record"], "source": "La Nouvelle Tribune (03/11/2026), Kickfootball (21/10/2026), consultés le 19/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "IL LE BAT", "color": "white"}, {"t": "AVANT NOËL ?", "color": "gold"}], "size": 125,
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}],
+     "cta": "Ton pronostic en commentaire"}
+  ]
+}
