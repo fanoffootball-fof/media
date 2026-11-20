@@ -1,0 +1,131 @@
+{
+  "accent": "blue",
+  "seed": 102,
+  "music": "epique",
+  "scenes": [
+    {
+      "type": "title",
+      "dur": 2.0,
+      "kicker": "TOP 3",
+      "lines": [
+        {
+          "t": "RONALDO",
+          "color": "white"
+        },
+        {
+          "t": "MESSI",
+          "color": "gold"
+        },
+        {
+          "t": "LEWANDOWSKI",
+          "color": "white"
+        }
+      ],
+      "size": 160,
+      "sub": [
+        "Les rois du but en Ligue des champions"
+      ]
+    },
+    {
+      "type": "cards",
+      "dur": 5.5,
+      "title": "MEILLEURS BUTEURS",
+      "subtitle": "de l'histoire de la Ligue des champions",
+      "numbered": true,
+      "items": [
+        [
+          "CRISTIANO RONALDO",
+          "140 buts · Man United, Real, Juventus"
+        ],
+        [
+          "LIONEL MESSI",
+          "129 buts · Barça, PSG"
+        ],
+        [
+          "ROBERT LEWANDOWSKI",
+          "109 buts · Dortmund, Bayern, Barça"
+        ]
+      ],
+      "source": "UEFA.com, hors qualifications, mis à jour le 04/11/2026"
+    },
+    {
+      "type": "counters",
+      "dur": 3.5,
+      "top": "RONALDO DEVANT MESSI",
+      "items": [
+        {
+          "value": 11,
+          "from": 0,
+          "label": "BUTS D'AVANCE",
+          "size": 260,
+          "color": "gold"
+        }
+      ],
+      "chips": [
+        {
+          "label": "Ronaldo",
+          "sub": "140 buts",
+          "color": "blue"
+        },
+        {
+          "label": "Messi",
+          "sub": "129 buts",
+          "color": "grey"
+        }
+      ],
+      "source": "UEFA.com, hors qualifications, mis à jour le 04/11/2026"
+    },
+    {
+      "type": "statement",
+      "dur": 3.5,
+      "lines": [
+        {
+          "t": "SEULS 3 JOUEURS",
+          "color": "white"
+        },
+        {
+          "t": "ONT PASSÉ",
+          "color": "white"
+        },
+        {
+          "t": "LES 100 BUTS",
+          "color": "gold"
+        }
+      ],
+      "box": [
+        "Benzema 4e avec 90 buts"
+      ],
+      "source": "UEFA.com, hors qualifications, mis à jour le 04/11/2026"
+    },
+    {
+      "type": "poll",
+      "dur": 3.5,
+      "lines": [
+        {
+          "t": "LE ROI",
+          "color": "white"
+        },
+        {
+          "t": "DE LA LDC ?",
+          "color": "gold"
+        }
+      ],
+      "size": 130,
+      "options": [
+        {
+          "label": "RONALDO",
+          "color": "blue"
+        },
+        {
+          "label": "MESSI",
+          "color": "gold"
+        },
+        {
+          "label": "LEWY",
+          "color": "red"
+        }
+      ],
+      "cta": "Envoie-la à un fan de Messi"
+    }
+  ]
+}

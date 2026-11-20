@@ -1,0 +1,19 @@
+{
+  "accent": {"split": ["blue", "red"]},
+  "left_name": "Lautaro", "right_name": "Álvarez",
+  "seed": 101,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "lines": [{"t": "LAUTARO", "color": "blue"}, {"t": "VS", "color": "white"}, {"t": "ÁLVAREZ", "color": "red"}],
+     "size": 190, "sub": ["Le meilleur 9 argentin cette saison ?"]},
+    {"type": "duel", "dur": 5.0, "rows": [{"label": "MATCHS", "l": 7, "r": 12}, {"label": "BUTS", "l": 6, "r": 2}, {"label": "PASSES DÉCISIVES", "l": 1, "r": 3}],
+     "source": "Foot Mercato, saison 2026-27 en club, consulté le 20/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "LAUTARO :", "color": "blue"}, {"t": "6 BUTS", "color": "white"}, {"t": "EN 7 MATCHS", "color": "gold"}],
+     "box": ["4 en Serie A, 2 en Ligue des champions"], "source": "Foot Mercato, saison 2026-27 avec l'Inter, consulté le 20/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "ÁLVAREZ :", "color": "red"}, {"t": "2 BUTS, 3 PASSES D.", "color": "white"}, {"t": "EN 12 MATCHS", "color": "gold"}],
+     "box": ["Avec l'Atlético de Madrid"], "source": "Foot Mercato, saison 2026-27 avec l'Atlético, consulté le 20/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "LE MEILLEUR", "color": "white"}, {"t": "NUMÉRO 9 ?", "color": "gold"}], "size": 130,
+     "options": [{"label": "LAUTARO", "color": "blue"}, {"label": "ÁLVAREZ", "color": "red"}],
+     "cta": "Ton choix en commentaire, avec un argument"}
+  ]
+}
