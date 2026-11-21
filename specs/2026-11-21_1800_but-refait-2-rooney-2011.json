@@ -1,0 +1,349 @@
+{
+ "accent": "red",
+ "seed": 83,
+ "music": "stade",
+ "scenes": [
+  {
+   "type": "title",
+   "dur": 2.0,
+   "kicker": "BUT REFAIT N°2",
+   "lines": [
+    {
+     "t": "WAYNE",
+     "color": "white"
+    },
+    {
+     "t": "ROONEY",
+     "color": "gold"
+    }
+   ],
+   "sub": [
+    "Le retourné du derby",
+    "Man United 2-1 Man City"
+   ]
+  },
+  {
+   "type": "pitch",
+   "dur": 4.5,
+   "kicker": "BUT REFAIT N°2",
+   "title": "ROONEY · 2011",
+   "view_from": 50,
+   "players": [
+    {
+     "team": "def",
+     "path": [
+      [
+       38,
+       85,
+       0
+      ],
+      [
+       39,
+       86.5,
+       1.5
+      ],
+      [
+       39,
+       87,
+       2.2
+      ]
+     ]
+    },
+    {
+     "team": "def",
+     "path": [
+      [
+       60,
+       86,
+       0
+      ],
+      [
+       59,
+       87,
+       1.5
+      ],
+      [
+       58.5,
+       88,
+       2.2
+      ]
+     ]
+    },
+    {
+     "team": "def",
+     "path": [
+      [
+       79,
+       80,
+       0
+      ],
+      [
+       81,
+       79,
+       1.0
+      ],
+      [
+       81,
+       78.5,
+       2.2
+      ]
+     ]
+    },
+    {
+     "team": "def",
+     "path": [
+      [
+       32,
+       82,
+       0
+      ],
+      [
+       34,
+       84,
+       1.5
+      ],
+      [
+       34,
+       85,
+       2.2
+      ]
+     ]
+    },
+    {
+     "team": "def",
+     "path": [
+      [
+       60,
+       76,
+       0
+      ],
+      [
+       58,
+       79,
+       1.5
+      ],
+      [
+       57,
+       81,
+       2.2
+      ]
+     ]
+    },
+    {
+     "team": "gk",
+     "label": "Hart",
+     "path": [
+      [
+       51,
+       98.6,
+       0
+      ],
+      [
+       50,
+       98.6,
+       2.0
+      ],
+      [
+       49.5,
+       98.8,
+       2.6
+      ]
+     ]
+    },
+    {
+     "team": "att",
+     "path": [
+      [
+       38,
+       78,
+       0
+      ],
+      [
+       40,
+       82,
+       1.5
+      ],
+      [
+       41,
+       84,
+       2.2
+      ]
+     ]
+    },
+    {
+     "team": "att",
+     "path": [
+      [
+       66,
+       81,
+       0
+      ],
+      [
+       67,
+       84,
+       1.5
+      ],
+      [
+       67,
+       85,
+       2.2
+      ]
+     ]
+    },
+    {
+     "team": "att",
+     "label": "Nani",
+     "path": [
+      [
+       84,
+       74,
+       0
+      ],
+      [
+       87,
+       79,
+       0.9
+      ],
+      [
+       88,
+       81,
+       1.2
+      ]
+     ]
+    },
+    {
+     "team": "att",
+     "label": "Rooney",
+     "star": true,
+     "path": [
+      [
+       53,
+       82,
+       0
+      ],
+      [
+       51,
+       87,
+       1.3
+      ],
+      [
+       50,
+       89.5,
+       2.0
+      ],
+      [
+       50,
+       89.8,
+       2.6
+      ]
+     ]
+    }
+   ],
+   "ball": [
+    [
+     85,
+     75,
+     0
+    ],
+    [
+     87.6,
+     80,
+     0.9
+    ],
+    [
+     88.4,
+     81.6,
+     1.2
+    ],
+    [
+     50.4,
+     89.6,
+     2.0,
+     "air"
+    ],
+    [
+     46.5,
+     101.2,
+     2.35
+    ]
+   ],
+   "goal_t": 2.3,
+   "captions": [
+    [
+     0,
+     "Nani sur l'aile droite"
+    ],
+    [
+     1.2,
+     "Centre de Nani"
+    ],
+    [
+     1.7,
+     "Rooney, dos au but…"
+    ],
+    [
+     2.0,
+     "Retourné du droit !"
+    ]
+   ],
+   "source": "Reconstitution schématique · d'après Al Jazeera et Fox Sports"
+  },
+  {
+   "type": "pitch",
+   "dur": 4.5,
+   "kicker": "AU RALENTI",
+   "title": "ROONEY · 2011",
+   "keep_header": true,
+   "view_from": 50,
+   "speed": 0.6,
+   "t0": 1.0,
+   "replay": true,
+   "source": "Reconstitution schématique · d'après Al Jazeera et Fox Sports"
+  },
+  {
+   "type": "statement",
+   "dur": 3.0,
+   "lines": [
+    {
+     "t": "12 FÉVRIER 2011",
+     "color": "white"
+    },
+    {
+     "t": "OLD TRAFFORD",
+     "color": "gold"
+    }
+   ],
+   "box": [
+    "78e minute, 2-1 contre City",
+    "Dans la lucarne de Joe Hart"
+   ],
+   "source": "Al Jazeera, Fox Sports, Man City, consultés le 21/11/2026"
+  },
+  {
+   "type": "poll",
+   "dur": 3.5,
+   "lines": [
+    {
+     "t": "LE PLUS BEAU BUT",
+     "color": "white"
+    },
+    {
+     "t": "DE ROONEY ?",
+     "color": "gold"
+    }
+   ],
+   "size": 120,
+   "options": [
+    {
+     "label": "OUI",
+     "color": "red"
+    },
+    {
+     "label": "NON",
+     "color": "blue"
+    }
+   ],
+   "cta": "Envoie-la à ton pote fan de City"
+  }
+ ]
+}

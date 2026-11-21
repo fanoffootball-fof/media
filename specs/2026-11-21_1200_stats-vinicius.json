@@ -1,0 +1,19 @@
+{
+  "accent": "purple",
+  "seed": 71,
+  "music": "electro",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "STATS AVANT LE MATCH", "lines": [{"t": "VINÍCIUS", "color": "white"}, {"t": "JR", "color": "gold"}],
+     "sub": ["1 seul but en 12 matchs", "Saison 2026-27 avec le Real"], "pill": "REAL MADRID"},
+    {"type": "counters", "dur": 4.0, "top": "TOUTES COMPÉTITIONS 2026-27",
+     "items": [{"value": 1, "label": "BUT", "size": 260, "color": "gold"}, {"value": 3, "label": "PASSES D", "size": 260, "color": "white"}],
+     "badge": "12 matchs joués", "source": "Stats Foot Mercato et MadridXtra, au 21/11/2026"},
+    {"type": "cards", "dur": 4.0, "title": "PAR COMPÉTITION",
+     "items": [["LIGA", "8 matchs · 1 but · 3 passes D"], ["LIGUE DES CHAMPIONS", "4 matchs · 0 but · 0 passe D"], ["CARTONS", "2 jaunes · 1 rouge"]],
+     "source": "Stats Foot Mercato et FotMob, au 21/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "CE SOIR, 21H", "color": "white"}, {"t": "CONTRE LE CELTA", "color": "gold"}],
+     "box": ["Real Madrid – Celta Vigo", "en Liga"], "source": "Horaire : Sport News Africa, 21/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "IL MARQUE", "color": "white"}, {"t": "CE SOIR ?", "color": "gold"}], "size": 130,
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}], "cta": "Ton avis en commentaire"}
+  ]
+}
