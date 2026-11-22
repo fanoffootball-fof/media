@@ -1,0 +1,17 @@
+{
+  "accent": "cyan",
+  "seed": 127,
+  "music": "epique",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "CHOIX IMPOSSIBLE N°2", "lines": [{"t": "RONALDINHO", "color": "gold"}, {"t": "OU YAMAL ?", "color": "white"}],
+     "size": 170, "sub": ["Tu n'en gardes qu'un", "3 manches · légende contre actuel"]},
+    {"type": "poll", "dur": 3.0, "lines": [{"t": "MANCHE 1", "color": "gold"}, {"t": "LE DRIBBLEUR", "color": "white"}], "size": 120,
+     "options": [{"label": "RONALDINHO", "color": "green"}, {"label": "YAMAL", "color": "red"}], "cta": "Lequel tu gardes ?"},
+    {"type": "poll", "dur": 3.0, "lines": [{"t": "MANCHE 2", "color": "gold"}, {"t": "LE DÉFENSEUR", "color": "white"}], "size": 120,
+     "options": [{"label": "CANNAVARO", "color": "blue"}, {"label": "VAN DIJK", "color": "orange"}], "cta": "Lequel tu gardes ?"},
+    {"type": "poll", "dur": 3.0, "lines": [{"t": "MANCHE 3", "color": "gold"}, {"t": "LE MILIEU", "color": "white"}], "size": 120,
+     "options": [{"label": "PIRLO", "color": "blue"}, {"label": "RODRI", "color": "cyan"}], "cta": "Lequel tu gardes ?"},
+    {"type": "statement", "dur": 4.5, "lines": [{"t": "RONALDINHO OU YAMAL ?", "color": "white"}, {"t": "CANNAVARO OU VAN DIJK ?", "color": "white"}, {"t": "PIRLO OU RODRI ?", "color": "gold"}],
+     "box": ["Tes 3 choix", "en commentaire"], "size": 66}
+  ]
+}

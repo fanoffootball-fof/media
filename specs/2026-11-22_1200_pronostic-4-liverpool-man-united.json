@@ -1,0 +1,20 @@
+{
+  "accent": {"split": ["red", "orange"]},
+  "left_name": "LIVERPOOL",
+  "right_name": "MAN UNITED",
+  "seed": 114,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "PRONOSTIC N°4", "lines": [{"t": "LIVERPOOL", "color": "white"}, {"t": "MAN UNITED", "color": "gold"}],
+     "size": 170, "sub": ["Aujourd'hui 17h30 · Anfield", "Premier League · 11e journée"]},
+    {"type": "duel", "dur": 4.5, "rows": [{"label": "POINTS", "l": 18, "r": 8}, {"label": "VICTOIRES", "l": 5, "r": 1}, {"label": "BUTS MARQUÉS", "l": 14, "r": 14}],
+     "source": "Classement Goal.com, au 21/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "LIVERPOOL 4e", "color": "white"}, {"t": "UNITED 18e", "color": "gold"}, {"t": "ZONE ROUGE", "color": "white"}],
+     "box": ["10 matchs joués chacun", "1 seule victoire pour United"], "source": "Classement Goal.com, au 21/11/2026"},
+    {"type": "statement", "dur": 3.0, "lines": [{"t": "1er MATCH", "color": "white"}, {"t": "DE POCHETTINO", "color": "gold"}],
+     "box": ["sur le banc de United", "contre le Liverpool d'Iraola"], "source": "Goal.com, consulté le 22/11/2026"},
+    {"type": "poll", "dur": 4.0, "lines": [{"t": "QUI GAGNE", "color": "white"}, {"t": "À ANFIELD ?", "color": "gold"}],
+     "options": [{"label": "LIV", "color": "red"}, {"label": "NUL", "color": "grey"}, {"label": "MU", "color": "orange"}],
+     "cta": "Abonne-toi : un pronostic à chaque gros match"}
+  ]
+}
