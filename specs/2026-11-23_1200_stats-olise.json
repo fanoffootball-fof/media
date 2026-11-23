@@ -1,0 +1,20 @@
+{
+  "accent": "red",
+  "seed": 123,
+  "music": "electro",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "STATS DU LUNDI", "lines": [{"t": "MICHAEL", "color": "white"}, {"t": "OLISE", "color": "gold"}],
+     "sub": ["6 buts + 3 passes D", "en 10 matchs de Bundesliga"], "pill": "BAYERN MUNICH"},
+    {"type": "counters", "dur": 4.0, "top": "BUNDESLIGA 2026-27",
+     "items": [{"value": 6, "label": "BUTS", "size": 260, "color": "gold"}, {"value": 3, "label": "PASSES D", "size": 260, "color": "white"}],
+     "badge": "10 matchs · 792 minutes", "source": "Stats FotMob, au 23/11/2026"},
+    {"type": "cards", "dur": 4.5, "title": "SA SAISON EN CHIFFRES", "subtitle": "Bundesliga 2026-27",
+     "items": [["41 TIRS", "dont 19 cadrés"], ["5,14 xG", "6 buts marqués"], ["NOTE MOYENNE", "8,26 sur 10"]],
+     "source": "Stats FotMob, au 23/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "9 BUTS OU PASSES D", "color": "white"}, {"t": "EN 10 MATCHS", "color": "gold"}],
+     "box": ["6 buts + 3 passes décisives", "9 titularisations"], "source": "Stats FotMob, au 23/11/2026"},
+    {"type": "poll", "dur": 4.0, "lines": [{"t": "MEILLEUR AILIER", "color": "white"}, {"t": "DU MONDE ?", "color": "gold"}], "size": 120,
+     "options": [{"label": "OLISE", "color": "red"}, {"label": "YAMAL", "color": "blue"}, {"label": "SALAH", "color": "green"}],
+     "cta": "Envoie-la à un fan du Bayern"}
+  ]
+}

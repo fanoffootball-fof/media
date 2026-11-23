@@ -1,0 +1,17 @@
+{
+  "accent": "green",
+  "seed": 131,
+  "music": "stade",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "QUIZ FOOT", "lines": [{"t": "DEVINE", "color": "white"}, {"t": "LA LÉGENDE", "color": "gold"}],
+     "sub": ["en 3 indices", "Mets pause si tu as trouvé"]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 0, "clues": [["Né à Nkon (Cameroun)", "en 1981"], ["Arrivé au Barça en 2004", "depuis Majorque"], ["Triplé avec l'Inter", "en 2010"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 1, "clues": [["Né à Nkon (Cameroun)", "en 1981"], ["Arrivé au Barça en 2004", "depuis Majorque"], ["Triplé avec l'Inter", "en 2010"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 2, "clues": [["Né à Nkon (Cameroun)", "en 1981"], ["Arrivé au Barça en 2004", "depuis Majorque"], ["Triplé avec l'Inter", "en 2010"]]},
+    {"type": "reveal", "dur": 3.0, "pre": "C'EST…", "lines": ["SAMUEL", "ETO'O"], "sub": "Ligue des champions 2006, 2009, 2010", "pill": "4 fois joueur africain de l'année",
+     "source": "Britannica, inter.it, fcbarcelona.com, consultés le 23/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "TU L'AS EU", "color": "white"}, {"t": "À QUEL INDICE ?", "color": "gold"}], "size": 120,
+     "options": [{"label": "1", "color": "white"}, {"label": "2", "color": "white"}, {"label": "3", "color": "white"}], "filled": false,
+     "cta": "Abonne-toi : un quiz chaque lundi et jeudi"}
+  ]
+}
