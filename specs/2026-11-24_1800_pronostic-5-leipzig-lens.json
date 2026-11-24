@@ -1,0 +1,20 @@
+{
+  "accent": {"split": ["red", "gold"]},
+  "left_name": "LEIPZIG",
+  "right_name": "LENS",
+  "seed": 1245,
+  "music": "epique",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "PRONOSTIC N°5", "lines": [{"t": "LEIPZIG", "color": "white"}, {"t": "LENS", "color": "gold"}],
+     "size": 190, "sub": ["Ce soir 21h · Red Bull Arena", "Ligue des champions · 5e journée"]},
+    {"type": "duel", "dur": 4.5, "rows": [{"label": "POINTS EN LDC", "l": 3, "r": 3}, {"label": "BUTS MARQUÉS", "l": 5, "r": 4}, {"label": "BUTS ENCAISSÉS", "l": 11, "r": 16}],
+     "source": "Sports Mole (22/11) et MercatoLive (21/11), consultés le 24/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "LEIPZIG 30e", "color": "white"}, {"t": "LENS 33e", "color": "gold"}],
+     "box": ["1 victoire, 3 défaites chacun", "après 4 journées de LdC"], "source": "MercatoLive, au 21/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "LEIPZIG :", "color": "red"}, {"t": "4 VICTOIRES", "color": "white"}, {"t": "DE SUITE EN BUNDESLIGA", "color": "white"}],
+     "box": ["Lens : aucune victoire", "sur ses 3 derniers matchs de L1"], "source": "Sports Mole, au 22/11/2026"},
+    {"type": "poll", "dur": 4.0, "lines": [{"t": "QUI GAGNE", "color": "white"}, {"t": "À LEIPZIG ?", "color": "gold"}],
+     "options": [{"label": "RBL", "color": "red"}, {"label": "NUL", "color": "grey"}, {"label": "LENS", "color": "gold"}],
+     "cta": "Envoie-la à un fan du RC Lens"}
+  ]
+}

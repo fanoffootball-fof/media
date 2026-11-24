@@ -1,0 +1,19 @@
+{
+  "accent": {"split": ["red", "blue"]},
+  "left_name": "Xavi", "right_name": "Pirlo",
+  "seed": 241,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "lines": [{"t": "XAVI", "color": "red"}, {"t": "VS", "color": "white"}, {"t": "PIRLO", "color": "blue"}],
+     "size": 200, "sub": ["Le meilleur meneur de jeu ?"]},
+    {"type": "duel", "dur": 4.5, "rows": [{"label": "SÉLECTIONS", "l": 133, "r": 116}, {"label": "BUTS EN SÉLECTION", "l": 13, "r": 13}],
+     "source": "RSSSF et FIGC, consultés le 24/11/2026"},
+    {"type": "duel", "dur": 5.0, "rows": [{"label": "COUPES DU MONDE", "l": 1, "r": 1}, {"label": "EUROS GAGNÉS", "l": 2, "r": 0},
+     {"label": "LIGUES DES CHAMPIONS", "l": 4, "r": 2}], "source": "Britannica, FC Barcelona, UEFA.com, consultés le 24/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "XAVI :", "color": "red"}, {"t": "767 MATCHS", "color": "white"}, {"t": "AVEC LE BARÇA", "color": "gold"}],
+     "box": ["25 titres en 17 saisons", "Pirlo : 2 LdC avec Milan (2003, 2007)"], "source": "FC Barcelona et UEFA.com, consultés le 24/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "TU PRENDS QUI", "color": "white"}, {"t": "AU MILIEU ?", "color": "gold"}], "size": 120,
+     "options": [{"label": "XAVI", "color": "red"}, {"label": "PIRLO", "color": "blue"}],
+     "cta": "Explique ton choix en commentaire"}
+  ]
+}
