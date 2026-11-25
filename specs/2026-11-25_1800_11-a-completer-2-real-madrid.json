@@ -1,0 +1,33 @@
+{
+  "accent": "purple",
+  "seed": 1407,
+  "music": "stade",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "LE 11 À COMPLÉTER N°2", "lines": [{"t": "LE 11 DU", "color": "white"}, {"t": "REAL MADRID", "color": "gold"}],
+     "size": 190, "sub": ["Il manque un joueur"]},
+    {"type": "pitch", "dur": 6.0, "kicker": "LE 11 À COMPLÉTER", "title": "QUI TU METS ?", "view_from": 0, "att_color": "white",
+     "players": [
+       {"team": "gk", "label": "Casillas", "path": [[50, 12, 0]]},
+       {"team": "att", "label": "Ramos", "path": [[32, 26, 0]]},
+       {"team": "att", "label": "Hierro", "path": [[68, 26, 0]]},
+       {"team": "att", "label": "R. Carlos", "path": [[10, 42, 0]]},
+       {"team": "att", "label": "Carvajal", "path": [[90, 42, 0]]},
+       {"team": "att", "label": "Kroos", "path": [[50, 52, 0]]},
+       {"team": "att", "label": "Zidane", "path": [[26, 60, 0]]},
+       {"team": "att", "label": "Modrić", "path": [[74, 60, 0]]},
+       {"team": "att", "label": "Ronaldo", "path": [[18, 76, 0]]},
+       {"team": "att", "label": "Figo", "path": [[82, 76, 0]]},
+       {"team": "att", "label": "?", "star": true, "path": [[50, 86, 0]]}
+     ],
+     "captions": [[0, "Il manque : l'avant-centre"]],
+     "source": "Onze choisi par Fan of Football · joueurs passés par le club, d'après Wikipédia (liste des joueurs du Real Madrid)"},
+    {"type": "cards", "dur": 4.0, "title": "LES 3 CANDIDATS",
+     "items": [["BENZEMA · 354 BUTS", "648 matchs · 2009-2023"],
+               ["RAÚL · 323 BUTS", "741 matchs · 1994-2010"],
+               ["DI STÉFANO · 308 BUTS", "396 matchs · 1953-1964"]],
+     "source": "Wikipédia (au 18/10/2026) et realmadrid.com, consultés le 25/11/2026"},
+    {"type": "poll", "dur": 4.0, "lines": [{"t": "TON 9", "color": "white"}, {"t": "DU REAL ?", "color": "gold"}],
+     "options": [{"label": "BENZEMA", "color": "blue"}, {"label": "RAÚL", "color": "gold"}, {"label": "DI STÉFANO", "color": "purple"}],
+     "cta": "Ton 9 en commentaire, et pourquoi"}
+  ]
+}

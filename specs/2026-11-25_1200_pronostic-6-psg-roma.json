@@ -1,0 +1,20 @@
+{
+  "accent": {"split": ["blue", "orange"]},
+  "left_name": "PSG",
+  "right_name": "ROMA",
+  "seed": 1311,
+  "music": "electro",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "PRONOSTIC N°6", "lines": [{"t": "PSG", "color": "white"}, {"t": "ROMA", "color": "gold"}],
+     "size": 210, "sub": ["Ce soir 21h · Parc des Princes", "Ligue des champions · 5e journée"]},
+    {"type": "duel", "dur": 4.5, "rows": [{"label": "POINTS EN LDC", "l": 12, "r": 4}, {"label": "VICTOIRES EN LDC", "l": 4, "r": 1}],
+     "source": "beIN Sports, Yahoo Sports et NBC Sports (24/11), consultés le 25/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "PSG :", "color": "blue"}, {"t": "12 VICTOIRES", "color": "white"}, {"t": "DE SUITE", "color": "white"}],
+     "box": ["Toutes compétitions confondues", "Roma : 12 sans défaite en Serie A"], "source": "beIN Sports et Yahoo Sports, au 24/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "1er MATCH", "color": "white"}, {"t": "OFFICIEL", "color": "gold"}, {"t": "ENTRE LES DEUX", "color": "white"}],
+     "box": ["Luis Enrique a entraîné", "la Roma en 2011-2012"], "source": "beIN Sports, au 24/11/2026"},
+    {"type": "poll", "dur": 4.0, "lines": [{"t": "QUI GAGNE", "color": "white"}, {"t": "AU PARC ?", "color": "gold"}],
+     "options": [{"label": "PSG", "color": "blue"}, {"label": "NUL", "color": "grey"}, {"label": "ROMA", "color": "orange"}],
+     "cta": "Abonne-toi : un pronostic chaque soir de gros match"}
+  ]
+}
