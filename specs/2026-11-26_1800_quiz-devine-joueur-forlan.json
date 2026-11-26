@@ -1,0 +1,17 @@
+{
+  "accent": "cyan",
+  "seed": 1519,
+  "music": "epique",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "QUIZ FOOT", "lines": [{"t": "DEVINE", "color": "white"}, {"t": "LA LÉGENDE", "color": "gold"}],
+     "sub": ["en 3 indices", "Mets pause si tu as trouvé"]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 0, "clues": [["Né à Montevideo", "en 1979"], ["Soulier d'or européen", "en 2005 et en 2009"], ["Ballon d'or", "de la Coupe du monde 2010"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 1, "clues": [["Né à Montevideo", "en 1979"], ["Soulier d'or européen", "en 2005 et en 2009"], ["Ballon d'or", "de la Coupe du monde 2010"]]},
+    {"type": "quiz_clue", "dur": 4.0, "index": 2, "clues": [["Né à Montevideo", "en 1979"], ["Soulier d'or européen", "en 2005 et en 2009"], ["Ballon d'or", "de la Coupe du monde 2010"]]},
+    {"type": "reveal", "dur": 3.0, "pre": "C'EST…", "lines": ["DIEGO", "FORLÁN"], "sub": "5 buts au Mondial 2010", "pill": "Copa América 2011",
+     "source": "Britannica, Wikipédia EN, consultés le 26/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "TROP FACILE", "color": "white"}, {"t": "OU TROP DUR ?", "color": "gold"}], "size": 125,
+     "options": [{"label": "FACILE", "color": "green"}, {"label": "DUR", "color": "red"}],
+     "cta": "Abonne-toi : un quiz chaque lundi et jeudi"}
+  ]
+}

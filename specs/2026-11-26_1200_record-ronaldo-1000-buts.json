@@ -1,0 +1,23 @@
+{
+  "accent": "red",
+  "seed": 1513,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "OBJECTIF 1000", "lines": [{"t": "RONALDO", "color": "white"}, {"t": "PLUS QUE 13 BUTS", "color": "gold"}],
+     "size": 170, "sub": ["avant les 1000 buts en carrière"]},
+    {"type": "progress", "dur": 4.5, "top": "BUTS EN CARRIÈRE", "value": 987, "from": 900, "label": "BUTS",
+     "target": 1000, "big": "ENCORE 13", "sub": "987 buts en 1 345 matchs",
+     "source": "ronaldostats.app, mis à jour le 24/11/2026 (amicaux compris), consulté le 26/11/2026"},
+    {"type": "counters", "dur": 4.0, "top": "OÙ IL LES A MARQUÉS",
+     "items": [{"value": 841, "from": 0, "label": "EN CLUB", "size": 230, "color": "gold"}, {"value": 146, "from": 0, "label": "PORTUGAL", "size": 230, "color": "white"}],
+     "badge": "841 + 146 = 987", "source": "ronaldostats.app, mis à jour le 24/11/2026, consulté le 26/11/2026"},
+    {"type": "cards", "dur": 4.0, "title": "ET IL MARQUE ENCORE", "subtitle": "à 41 ans",
+     "items": [["11 BUTS EN 14 MATCHS", "avec Al Nassr en 2026-27"], ["30 BUTS EN 2026", "en 44 matchs"], ["NÉ LE 5 FÉVRIER 1985", "à Funchal"]],
+     "source": "ronaldostats.app, mis à jour le 24/11/2026, consulté le 26/11/2026"},
+    {"type": "statement", "dur": 3.0, "lines": [{"t": "PLUS DE SÉLECTION", "color": "white"}, {"t": "DEPUIS LE 5 NOVEMBRE", "color": "gold"}],
+     "box": ["les 13 derniers buts", "viendront en club"], "source": "ronaldostats.app (retraite internationale le 05/11/2026), consulté le 26/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "LES 1000 BUTS", "color": "white"}, {"t": "AVANT L'ÉTÉ ?", "color": "gold"}], "size": 125,
+     "options": [{"label": "OUI", "color": "green"}, {"label": "NON", "color": "red"}],
+     "cta": "Envoie-la à un fan de CR7"}
+  ]
+}
