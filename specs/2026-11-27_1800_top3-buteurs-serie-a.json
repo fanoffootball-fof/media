@@ -1,0 +1,131 @@
+{
+ "accent": "green",
+ "seed": 112,
+ "music": "stade",
+ "scenes": [
+  {
+   "type": "title",
+   "dur": 1.8,
+   "kicker": "TOP 3",
+   "lines": [
+    {
+     "t": "PIOLA",
+     "color": "white"
+    },
+    {
+     "t": "TOTTI",
+     "color": "gold"
+    },
+    {
+     "t": "NORDAHL",
+     "color": "white"
+    }
+   ],
+   "size": 170,
+   "sub": [
+    "Les rois du but en Serie A"
+   ]
+  },
+  {
+   "type": "cards",
+   "dur": 5.5,
+   "title": "MEILLEURS BUTEURS",
+   "subtitle": "de l'histoire de la Serie A",
+   "numbered": true,
+   "items": [
+    [
+     "SILVIO PIOLA",
+     "274 buts · 537 matchs"
+    ],
+    [
+     "FRANCESCO TOTTI",
+     "250 buts · 619 matchs"
+    ],
+    [
+     "GUNNAR NORDAHL",
+     "225 buts · 291 matchs"
+    ]
+   ],
+   "source": "RSSSF, buts en Serie A, mis à jour le 05/06/2026"
+  },
+  {
+   "type": "counters",
+   "dur": 3.5,
+   "top": "NORDAHL, LA MACHINE",
+   "items": [
+    {
+     "value": 225,
+     "from": 0,
+     "label": "BUTS EN 291 MATCHS",
+     "size": 240,
+     "color": "gold"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Nordahl",
+     "sub": "0,77 but/match",
+     "color": "green"
+    },
+    {
+     "label": "Piola",
+     "sub": "0,51 but/match",
+     "color": "grey"
+    }
+   ],
+   "source": "RSSSF, buts en Serie A, mis à jour le 05/06/2026"
+  },
+  {
+   "type": "statement",
+   "dur": 3.5,
+   "lines": [
+    {
+     "t": "IMMOBILE,",
+     "color": "white"
+    },
+    {
+     "t": "8E AVEC",
+     "color": "white"
+    },
+    {
+     "t": "201 BUTS",
+     "color": "gold"
+    }
+   ],
+   "box": [
+    "Baggio 7e avec 205 buts"
+   ],
+   "source": "RSSSF, buts en Serie A, mis à jour le 05/06/2026"
+  },
+  {
+   "type": "poll",
+   "dur": 3.5,
+   "lines": [
+    {
+     "t": "LE ROI",
+     "color": "white"
+    },
+    {
+     "t": "DE LA SERIE A ?",
+     "color": "gold"
+    }
+   ],
+   "size": 120,
+   "options": [
+    {
+     "label": "PIOLA",
+     "color": "blue"
+    },
+    {
+     "label": "TOTTI",
+     "color": "gold"
+    },
+    {
+     "label": "NORDAHL",
+     "color": "red"
+    }
+   ],
+   "cta": "Envoie-la à ton pote fan de foot italien"
+  }
+ ]
+}

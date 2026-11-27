@@ -1,0 +1,128 @@
+{
+ "accent": {
+  "split": [
+   "white",
+   "red"
+  ]
+ },
+ "left_name": "Mbappé",
+ "right_name": "Kane",
+ "seed": 111,
+ "music": "electro",
+ "scenes": [
+  {
+   "type": "title",
+   "dur": 1.8,
+   "lines": [
+    {
+     "t": "MBAPPÉ",
+     "color": "white"
+    },
+    {
+     "t": "VS",
+     "color": "gold"
+    },
+    {
+     "t": "KANE",
+     "color": "red"
+    }
+   ],
+   "size": 200,
+   "sub": [
+    "Qui a le meilleur début de saison ?"
+   ]
+  },
+  {
+   "type": "duel",
+   "dur": 5.0,
+   "rows": [
+    {
+     "label": "MATCHS",
+     "l": 18,
+     "r": 14
+    },
+    {
+     "label": "BUTS",
+     "l": 19,
+     "r": 10
+    },
+    {
+     "label": "PASSES DÉCISIVES",
+     "l": 5,
+     "r": 11
+    }
+   ],
+   "source": "Foot Mercato, saison 2026-27 en club, toutes compétitions, consulté le 27/11/2026"
+  },
+  {
+   "type": "statement",
+   "dur": 3.5,
+   "lines": [
+    {
+     "t": "MBAPPÉ :",
+     "color": "white"
+    },
+    {
+     "t": "19 BUTS",
+     "color": "gold"
+    },
+    {
+     "t": "EN 18 MATCHS",
+     "color": "white"
+    }
+   ],
+   "box": [
+    "13 en Liga, 6 en Ligue des champions"
+   ],
+   "source": "Foot Mercato, saison 2026-27 avec le Real Madrid, consulté le 27/11/2026"
+  },
+  {
+   "type": "statement",
+   "dur": 3.5,
+   "lines": [
+    {
+     "t": "KANE :",
+     "color": "red"
+    },
+    {
+     "t": "11 PASSES D.",
+     "color": "gold"
+    },
+    {
+     "t": "EN 14 MATCHS",
+     "color": "white"
+    }
+   ],
+   "box": [
+    "Et 10 buts avec le Bayern"
+   ],
+   "source": "Foot Mercato, saison 2026-27 avec le Bayern Munich, consulté le 27/11/2026"
+  },
+  {
+   "type": "poll",
+   "dur": 3.5,
+   "lines": [
+    {
+     "t": "LE PLUS FORT",
+     "color": "white"
+    },
+    {
+     "t": "EN CE MOMENT ?",
+     "color": "gold"
+    }
+   ],
+   "size": 120,
+   "options": [
+    {
+     "label": "MBAPPÉ",
+     "color": "blue"
+    },
+    {
+     "label": "KANE",
+     "color": "red"
+    }
+   ],
+   "cta": "Ton camp en commentaire : Mbappé ou Kane ?"
+  }
+ ]
+}
