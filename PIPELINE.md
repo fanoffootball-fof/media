@@ -1,9 +1,9 @@
-# Production quotidienne @fanoffootball (TikTok + YouTube Shorts)
+# Production quotidienne @fanoffootball (TikTok + YouTube Shorts + Instagram Reels)
 
 Ce document est la procédure suivie chaque matin par la tâche planifiée Claude.
-Le propriétaire n'est jamais nommé (voir « Anonymat » dans les règles permanentes). Compte TikTok : `fanoffootball_fof` et chaîne YouTube (Shorts) connectée le 07/11/2026, tous deux publiés via Metricool (marque `7925135`, fuseau `Europe/Paris`).
+Le propriétaire n'est jamais nommé (voir « Anonymat » dans les règles permanentes). Compte TikTok : `fanoffootball_fof`, chaîne YouTube (Shorts) connectée le 07/11/2026 et compte Instagram `fanof_footballfof` (Reels, ajouté le 27/11/2026 à la demande du propriétaire), tous publiés via Metricool (marque `7925135`, fuseau `Europe/Paris`).
 
-**Chaque vidéo part sur les deux réseaux, à la même heure, en deux posts Metricool séparés** (un post `tiktok`, un post `youtube`), pour qu'un refus sur un réseau ne bloque pas l'autre.
+**Chaque vidéo part sur les trois réseaux, à la même heure, en trois posts Metricool séparés** (un post `tiktok`, un post `youtube`, un post `instagram`), pour qu'un refus sur un réseau ne bloque pas les autres.
 
 ## Campagne
 
@@ -132,7 +132,7 @@ Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, 
 ## Procédure (à suivre dans l'ordre)
 
 1. **Date.** Si on est après le 4 décembre 2026 : ne rien produire, prévenir le propriétaire que la campagne est terminée et qu'il peut supprimer la tâche planifiée. Fin.
-2. **Créneaux libres.** Charger les outils Metricool (ToolSearch `select:mcp__Metricool_Social_Media_Management__getScheduledPosts,mcp__Metricool_Social_Media_Management__createScheduledPost`), puis `getScheduledPosts` (brandId `7925135`, timezone `Europe/Paris`) sur la journée. Un créneau est occupé quand il a déjà son post TikTok à 12:00 ou 18:00 : on le laisse tel quel. S'il a son post TikTok mais pas son post YouTube, programmer seulement le post YouTube avec la même vidéo (fichier indiqué dans `journal.md`). Si tout est déjà programmé sur les deux réseaux : fin. Les republications YouTube de rattrapage à 09:30 (du 07/11 au 10/11) ne comptent pas comme des créneaux. Si l'heure d'un créneau est déjà passée ou à moins de 20 min : le sauter.
+2. **Créneaux libres.** Charger les outils Metricool (ToolSearch `select:mcp__Metricool_Social_Media_Management__getScheduledPosts,mcp__Metricool_Social_Media_Management__createScheduledPost`), puis `getScheduledPosts` (brandId `7925135`, timezone `Europe/Paris`) sur la journée. Un créneau est occupé quand il a déjà son post TikTok à 12:00 ou 18:00 : on le laisse tel quel. S'il a son post TikTok mais pas son post YouTube ou Instagram (à partir du 28/11/2026), programmer seulement le ou les posts manquants avec la même vidéo (fichier indiqué dans `journal.md`). Si tout est déjà programmé sur les trois réseaux : fin. Les republications YouTube de rattrapage à 09:30 (du 07/11 au 10/11) ne comptent pas comme des créneaux. Si l'heure d'un créneau est déjà passée ou à moins de 20 min : le sauter.
 3. **Contexte.** Lire `journal.md` (sujets et joueurs déjà traités : ne pas répéter un sujet ni un quiz, respecter la règle de diversité).
    **Abonnés.** Avec les outils d'analytics Metricool (`getAnalyticsAvailableMetrics` puis `getAnalyticsDataByMetrics`, réseau TikTok), relever le nombre d'abonnés. S'il atteint **10 000**, l'écrire en première ligne du compte rendu (« Seuil des 10 000 abonnés atteint : on peut lancer le format long d'1 minute »), sans rien changer d'autre.
 4. **Recherche.** Pour chaque créneau libre, choisir le format (rotation) et le joueur, puis vérifier **chaque chiffre et chaque fait** avec WebSearch + WebFetch du jour (Foot Mercato, FotMob, L'Équipe, sites officiels des clubs/ligues, Transfermarkt). Si deux sources divergent, en choisir une seule pour tous les chiffres de la vidéo et la citer avec la date dans `source`. Un fait non vérifié n'entre pas dans la vidéo. Indices de quiz : faits stables et vérifiables (lieu et année de naissance, clubs, titres).
@@ -161,8 +161,16 @@ Une **grosse actu** (record, retraite, blessure officielle, transfert officiel, 
                    "type": "short", "privacy": "public", "tags": ["<joueur>", "<club/sélection>", "football"],
                    "category": "SPORTS", "madeForKids": false, "isAiGeneratedContent": false}
    ```
-   Pour un quiz, ni le titre ni les tags ne révèlent la réponse. Si l'un des deux posts est refusé, garder l'autre et recopier l'erreur dans le compte rendu.
-10. **Journal.** Ajouter une ligne par vidéo dans `journal.md` (date, heure, format, joueur(s), sujet, `cta` : commentaire / partage / abonnement, fichier, sources, id Metricool sous la forme `TT 123 / YT 456`), commit + push.
+   Pour un quiz, ni le titre ni les tags ne révèlent la réponse.
+
+   **Puis un 3e post, Instagram Reel** (depuis le 28/11/2026), même vidéo, même heure : `providers` `[{"network": "instagram"}]`, `videoCoverMilliseconds` 2500, pas de `tiktokData` ni de `youtubeData`, la même légende que TikTok, et :
+   ```json
+   "instagramData": {"type": "REEL", "showReelOnFeed": true, "isAiGenerated": false}
+   ```
+   Pas d'`audioConfiguration` (la musique est déjà dans la vidéo). Pour un quiz, la légende ne révèle pas la réponse.
+
+   Si l'un des trois posts est refusé, garder les autres et recopier l'erreur dans le compte rendu.
+10. **Journal.** Ajouter une ligne par vidéo dans `journal.md` (date, heure, format, joueur(s), sujet, `cta` : commentaire / partage / abonnement, fichier, sources, id Metricool sous la forme `TT 123 / YT 456 / IG 789`), commit + push.
 11. **Compte rendu.** Pour le propriétaire, une ligne par vidéo programmée : heure, format, joueur, **l'accroche de la 1re scène et la question finale, mot pour mot**. Il peut ainsi les relire et, s'il le souhaite, modifier la légende dans Metricool avant la publication (sans que rien ne l'attende : la publication reste automatique). Puis tout problème rencontré.
 
 ## Règles permanentes
