@@ -1,0 +1,22 @@
+{
+  "accent": "cyan",
+  "seed": 97,
+  "music": "samba",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "STATS AVANT LE MATCH", "size": 170,
+     "lines": [{"t": "JUDE", "color": "white"}, {"t": "BELLINGHAM", "color": "gold"}],
+     "sub": ["7 buts, 4 passes D", "Saison 2026-27 avec le Real"], "pill": "REAL MADRID"},
+    {"type": "counters", "dur": 4.0, "top": "TOUTES COMPÉTITIONS 2026-27",
+     "items": [{"value": 7, "label": "BUTS", "size": 260, "color": "gold"}, {"value": 4, "label": "PASSES D", "size": 260, "color": "white"}],
+     "badge": "18 matchs joués", "source": "Stats Foot Mercato, au 28/11/2026"},
+    {"type": "cards", "dur": 4.0, "title": "PAR COMPÉTITION",
+     "items": [["LIGA", "13 matchs · 5 buts · 3 passes D"], ["LIGUE DES CHAMPIONS", "5 matchs · 2 buts · 1 passe D"], ["NOTE FOTMOB EN LIGA", "8,02 de moyenne"]],
+     "source": "Stats Foot Mercato et FotMob, au 28/11/2026"},
+    {"type": "statement", "dur": 3.5, "lines": [{"t": "CONTRE LE PSV", "color": "white"}, {"t": "1 BUT + 1 PASSE D", "color": "gold"}],
+     "box": ["En 45 minutes, Real 5-1 PSV", "Ce soir : Real – Alavés, 21h"],
+     "source": "FotMob (24/11) ; horaire Sport-Flash, au 28/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "MEILLEUR MILIEU", "color": "white"}, {"t": "DU MONDE ?", "color": "gold"}], "size": 120,
+     "options": [{"label": "JUDE B.", "color": "cyan"}, {"label": "PEDRI", "color": "red"}, {"label": "VITINHA", "color": "blue"}],
+     "cta": "Ton choix en commentaire"}
+  ]
+}

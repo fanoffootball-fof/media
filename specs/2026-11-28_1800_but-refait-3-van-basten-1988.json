@@ -1,0 +1,36 @@
+{
+  "accent": "orange",
+  "seed": 98,
+  "music": "epique",
+  "scenes": [
+    {"type": "title", "dur": 2.0, "kicker": "BUT REFAIT N°3", "size": 190,
+     "lines": [{"t": "MARCO", "color": "white"}, {"t": "VAN BASTEN", "color": "gold"}],
+     "sub": ["La volée impossible", "Finale de l'Euro 1988"]},
+    {"type": "pitch", "dur": 5.0, "kicker": "BUT REFAIT N°3", "title": "VAN BASTEN · 1988", "view_from": 50,
+     "players": [
+      {"team": "def", "path": [[44, 86, 0], [46, 88, 1.5], [47, 90, 2.9]]},
+      {"team": "def", "path": [[56, 88, 0], [57, 90, 1.5], [57, 91, 2.9]]},
+      {"team": "def", "path": [[73, 82, 0], [73, 85, 1.5], [72, 87, 2.9]]},
+      {"team": "def", "path": [[36, 80, 0], [37, 83, 1.5], [38, 85, 2.9]]},
+      {"team": "def", "path": [[20, 72, 0], [17, 71, 1.0], [16, 71, 2.9]]},
+      {"team": "gk", "label": "Dasaev", "path": [[51, 98.5, 0], [53, 98.6, 2.3], [54.5, 98.7, 2.9]]},
+      {"team": "att", "label": "Van Tiggelen", "path": [[24, 60, 0], [25, 61, 0.6], [25, 62, 2.9]]},
+      {"team": "att", "label": "Gullit", "path": [[46, 80, 0], [47, 84, 1.5], [48, 87, 2.9]]},
+      {"team": "att", "label": "Mühren", "path": [[11, 65, 0], [12.5, 67.5, 0.8], [13, 68, 1.3], [14, 69, 2.9]]},
+      {"team": "att", "label": "Van Basten", "star": true, "path": [[60, 83, 0], [62, 89, 1.5], [64, 94, 2.4], [64, 94.3, 2.9]]}
+     ],
+     "ball": [[24.6, 60.6, 0], [13, 67.6, 0.8], [13.6, 68.3, 1.3], [63.6, 94, 2.5, "air"], [45.8, 101.2, 2.85]],
+     "goal_t": 2.85,
+     "captions": [[0, "Van Tiggelen lance Mühren"], [1.3, "Centre de Mühren"], [2.1, "Van Basten, angle fermé…"], [2.5, "Volée du droit !"]],
+     "source": "Reconstitution schématique · d'après UEFA.com et The Irish Times"},
+    {"type": "pitch", "dur": 5.0, "kicker": "AU RALENTI", "title": "VAN BASTEN · 1988", "keep_header": true, "view_from": 50,
+     "speed": 0.6, "t0": 1.0, "replay": true,
+     "source": "Reconstitution schématique · d'après UEFA.com et The Irish Times"},
+    {"type": "statement", "dur": 3.0, "lines": [{"t": "25 JUIN 1988", "color": "white"}, {"t": "MUNICH", "color": "gold"}],
+     "box": ["54e minute, URSS 0-2 Pays-Bas", "Son 5e but de l'Euro 1988"],
+     "source": "UEFA.com et The Irish Times, consultés le 28/11/2026"},
+    {"type": "poll", "dur": 3.5, "lines": [{"t": "TON BUT REFAIT", "color": "white"}, {"t": "PRÉFÉRÉ ?", "color": "gold"}], "size": 120,
+     "options": [{"label": "V. BASTEN", "color": "orange"}, {"label": "ROONEY", "color": "red"}, {"label": "INIESTA", "color": "blue"}],
+     "cta": "Envoie-la à ton pote fan des Oranje"}
+  ]
+}
